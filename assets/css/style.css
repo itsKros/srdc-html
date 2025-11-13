@@ -10,83 +10,9 @@
     --mist: #F2F0ED;
 }
 
-/* =========================
-   GEORGIA FONT
-========================= */
-@font-face {
-  font-family: 'Georgia Custom';
-  src: url('../fonts/georgia/georgia.woff2') format('woff2'),
-       url('../fonts/georgia/georgia.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 
 
-/* =========================
-   SF PRO
-========================= */
-@font-face {
-  font-family: 'SF Pro';
-  src: url('../fonts/sf-pro/SF-Pro.ttf') format('ttf');
-  font-style: normal;
-  font-display: swap;
-}
 
-/* =========================
-   SF PRO DISPLAY - REGULAR
-========================= */
-@font-face {
-  font-family: 'SF Pro Display';
-  src: url('../fonts/sf-pro/SFProDisplay-Regular.woff2') format('woff2'),
-       url('../fonts/sf-pro/SFProDisplay-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* =========================
-   SF PRO DISPLAY - MEDIUM
-========================= */
-@font-face {
-  font-family: 'SF Pro Display';
-  src: url('../fonts/sf-pro/SFProDisplay-Medium.woff2') format('woff2'),
-       url('../fonts/sf-pro/SFProDisplay-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* =========================
-   SF PRO DISPLAY - SEMIBOLD
-========================= */
-@font-face {
-  font-family: 'SF Pro Display';
-  src: url('../fonts/sf-pro/SFProDisplay-Semibold.woff2') format('woff2'),
-       url('../fonts/sf-pro/SFProDisplay-Semibold.woff') format('woff');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* =========================
-   GLOBAL FONT USAGE
-========================= */
-body {
-  font-family: 'SF Pro', 
-               -apple-system, BlinkMacSystemFont, 
-               'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
-               'Helvetica Neue', sans-serif;
-  font-weight: 400;
-  line-height: 1.6;
-  color: #222;
-  background-color: var(--glo);
-}
-
-
-h1, h2, h3, blockquote {
-  font-family: 'Georgia Custom', Georgia, 'Times New Roman', serif;
-}
 
 
 /* ==============================================
@@ -143,6 +69,12 @@ h1, h2, h3, blockquote {
 }
 
 
+@media (max-width: 768px) {
+  br.mhb {
+    display: none;
+  }
+}
+
 
 #headerSection{margin-bottom:-124px;padding:clamp(16px,2vw,24px) 0}
 #headerSection>.header-container{width:100%;max-width:clamp(1140px,92vw,1392px);margin:0 auto;padding:0 1rem}
@@ -151,7 +83,7 @@ h1, h2, h3, blockquote {
 #headerSection .nav-link{font-size:clamp(13px, .9vw, 14px);font-family:'SF Pro',sans-serif;color:var(--glo)!important;padding:0!important;transition:color .3s ease}
 #headerSection .nav-link.active,#headerSection .nav-link:hover{color:#fff!important}
 #headerSection .navbar-nav{gap:clamp(16px,2.5vw,32px)}
-#headerSection .top-call{color:var(--glo);font-size:clamp(14px, 1vw, 16px);font-weight:500;font-family:'SF Pro Display',sans-serif;padding:10px 24px;text-decoration:none;line-height:24px;letter-spacing:.32px;background-color:rgba(255,255,255,.12);border-radius:25px;transition:background-color .3s ease,color .3s ease}
+#headerSection .top-call{color:var(--glo);font-size:clamp(14px, 1vw, 16px);font-weight:500;font-family:'SF Pro',sans-serif;padding:10px 24px;text-decoration:none;line-height:24px;letter-spacing:.32px;background-color:rgba(255,255,255,.12);border-radius:25px;transition:background-color .3s ease,color .3s ease}
 #headerSection .top-call:hover{background-color:rgba(255,255,255,.25)}
 .navbar-toggler-icon {
     background-image: url(../imgs/menu.svg);
@@ -190,10 +122,7 @@ h1, h2, h3, blockquote {
   }
   #headerSection>.header-container{padding:0px}
   #headerSection>.header-container>nav{border-radius:0px}
-   
   #headerSection .navbar-brand img{max-height:36px}
-
-
   #headerSection .navbar-collapse{padding:.75rem 1rem}
 
 
@@ -205,12 +134,14 @@ h1, h2, h3, blockquote {
 #homeHeroSection{background-image:url('assets/imgs/home/hero-image-square.png');background-size:cover;background-position:100% 27%;background-repeat:no-repeat;padding:0 0 clamp(3rem,4vw,4.75rem);position:relative}
 #homeHeroSection:before{content:'';position:absolute;width:100%;height:38%;bottom:0;background:linear-gradient(to bottom,transparent 50%,rgba(0,0,0,.62) 92%);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);z-index:1}
 #homeHeroSection .container *{z-index:2}
-#homeHeroSection .container .row{ height: 100vh; justify-content:space-between; align-items:flex-end;}
-#homeHeroSection h1{font-size:clamp(2rem,4vw,3.75rem);line-height:clamp(2.5rem,5vw,72px);color:var(--glo);margin:0}
-#homeHeroSection .left p{font-size:clamp(1rem,2vw,1.5rem);line-height:clamp(1.5rem,2.5vw,36px);color:rgba(255,255,255,.6);margin:0 0 10px 0}
+#homeHeroSection .container .row{ height: calc(100vh - 77px); justify-content:space-between; align-items:flex-end;}
+#homeHeroSection h1{font-size:3.75rem;line-height:clamp(2.5rem,5vw,72px);color:var(--glo);margin:0;margin-bottom:1.25rem;}
+
+#homeHeroSection .left p{    font-size: 1.5rem;    line-height: 2.25rem;color:rgba(255,255,255,.6);margin:0 0 10px 0}
+
 #homeHeroSection .right{gap:clamp(24px,3vw,48px);display:flex;flex-direction:column;align-items:flex-start}
-#homeHeroSection .right p{color:var(--glo);font-size:clamp(.875rem,1.5vw,1.125rem);margin:0}
-#homeHeroSection .right .btn{padding:clamp(8px,1vw,10px) clamp(16px,2vw,24px);font-size:clamp(.875rem,1vw,1rem);border-radius:32px;font-weight:500;background-color:var(--glo);font-family:'SF Pro Display',sans-serif}
+#homeHeroSection .right p{color:var(--glo);font-size:1.125rem;line-height: 1.875rem; margin:0}
+#homeHeroSection .right .btn{padding:clamp(8px,1vw,10px) clamp(16px,2vw,24px);font-size:clamp(.875rem,1vw,1rem);border-radius:32px;font-weight:500;background-color:var(--glo);font-family:'SF Pro',sans-serif}
 
 /* MEDIA QUERIES */
 @media (max-width:991px){
@@ -246,40 +177,59 @@ h1, h2, h3, blockquote {
 #homeServiceSection .title-section{padding-bottom:clamp(2rem,4vw,3.75rem);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between}
 #homeServiceSection .title h2{font-size:clamp(1.75rem,3vw,3rem);margin:0}
 #homeServiceSection .button{display:flex;gap:clamp(8px,2vw,10px);flex-wrap:wrap}
-#homeServiceSection .btn,#homeServiceSection .btn.active,#homeServiceSection .btn:hover,#homeServiceSection .btn.active:hover{padding:clamp(8px,1.5vw,10px) clamp(16px,2vw,24px);border-radius:25px;background-color:transparent;color:var(--ebony);border-color:transparent;transition:all .3s ease}
+#homeServiceSection .btn,#homeServiceSection .btn.active,#homeServiceSection .btn:hover,#homeServiceSection .btn.active:hover{
+    font-size: 1rem;
+    font-weight: 500;
+  padding:clamp(8px,1.5vw,10px) clamp(16px,2vw,24px);border-radius:25px;background-color:transparent;color:var(--ebony);border-color:transparent;transition:all .3s ease}
 #homeServiceSection .btn.active,#homeServiceSection .btn.active:hover,#homeServiceSection .btn:hover{background-color:var(--mist)}
 #homeServiceSection .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(8px,1.5vw,16px)}
-#homeServiceSection .service-grid .service-item{padding:clamp(8px,1vw,12px);background-color:var(--mist);border-radius:12px;display:flex;flex-direction:column;gap:clamp(16px,2vw,24px)}
+#homeServiceSection .service-grid .service-item{
+
+  padding:clamp(8px,1vw,12px);background-color:var(--mist);border-radius:12px;display:flex;flex-direction:column;gap:clamp(16px,2vw,24px)
+
+}
 #homeServiceSection .si-image{height:clamp(150px,15vw,215px);background-size:cover;background-position:center;background-repeat:no-repeat;border-radius:8px}
 #homeServiceSection .si-content{padding:clamp(8px,1vw,12px);gap:clamp(24px,3vw,37px);display:flex;flex-direction:column}
-#homeServiceSection .si-content h3{font-size:clamp(1.25rem,2vw,1.5rem);font-family:'SF Pro Display',sans-serif;font-weight:600;margin-bottom:0}
-#homeServiceSection .si-content p{font-size:clamp(.75rem,1.5vw,.875rem);font-family:'SF Pro Display',sans-serif;font-weight:400;margin-bottom:0;color:var(--ebony);opacity:.6}
-#homeServiceSection .btn.contact-us{background-color:#4c514d;color:#fff}
+#homeServiceSection .si-content h3{font-size:clamp(1.25rem,2vw,1.5rem);font-family:'SF Pro',sans-serif;font-weight:600;margin-bottom:0}
+#homeServiceSection .si-content p{font-size:clamp(.75rem,1.5vw,.875rem);font-family:'SF Pro',sans-serif;font-weight:400;margin-bottom:0;color:var(--ebony);opacity:.6}
+
+#homeServiceSection .btn.contact-us {
+    background-color: #4c514d;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-family: 'SF Pro', sans-serif;
+    font-weight: 500;
+}
+
 #homeServiceSection .title-section.look{padding-top:clamp(4rem,8vw,10rem);display:flex;flex-wrap:wrap;align-items:flex-start;gap:clamp(16px,2vw,24px)}
 #homeServiceSection .title-section.look .title{flex:0 0 40%}
-#homeServiceSection .title-section.look .button{flex:0 0 55%;display:flex;flex-direction:column;align-items:flex-start;gap:clamp(12px,2vw,24px)}
+#homeServiceSection .title-section.look .button{flex:0 0 41%;display:flex;flex-direction:column;align-items:flex-start;gap:clamp(24px,2vw,48px)}
 #homeServiceSection .title-section.look p{font-size:clamp(.875rem,1.5vw,1rem);line-height:clamp(1.25rem,2vw,1.5rem);margin:0}
 
 /* MEDIA QUERIES */
 @media (max-width:991px){
-  #homeServiceSection {
-    padding: clamp(4rem, 6vw, 5rem) 1rem clamp(4rem, 6vw, 5rem);
-}
+  #homeServiceSection { padding: clamp(4rem, 6vw, 5rem) 1rem clamp(4rem, 6vw, 5rem);}
   #homeServiceSection .service-grid{grid-template-columns:repeat(2,1fr)}
   #homeServiceSection .btn{font-size:clamp(.75rem,1.5vw,.875rem)}
   #homeServiceSection .title-section.look .title,
   #homeServiceSection .title-section.look .button{flex:0 0 100%;}
 }
+
 @media (max-width:575px){
-  #homeServiceSection .title-section {
-    gap: 20px;}
+  #homeServiceSection .title-section { gap: 20px;}
   #homeServiceSection .service-grid{grid-template-columns:1fr;gap:clamp(8px,3vw,16px)}
   #homeServiceSection .title-section.look{padding-top:clamp(2rem,6vw,4rem)}
   #homeServiceSection .title h2{font-size:clamp(1.5rem,5vw,2.25rem)}
   #homeServiceSection .title-section.look{padding-top:clamp(2rem,6vw,4rem);gap:clamp(12px,2vw,16px);}
   #homeServiceSection .title-section.look .title h2{font-size:clamp(1.5rem,5vw,2.25rem);}
-  #homeServiceSection .button {
-    justify-content: flex-start !important;}
+  #homeServiceSection .button {justify-content: flex-start !important;}
+}
+
+@media (min-width:1920px){
+  #homeServiceSection .title-section.look .button {
+      flex: 0 0 31%;
+  }
 }
 
 
@@ -287,13 +237,32 @@ h1, h2, h3, blockquote {
 #homeBenefitSection>.container{max-width:clamp(1140px,92vw,1366px);margin:0 auto;padding:0 1rem}
 #homeBenefitSection .row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:clamp(2rem,3vw,4rem)}
 #homeBenefitSection .title{flex:0 0 clamp(38%, 36%, 40%);display:flex;flex-direction:column;justify-content:flex-start;min-height:clamp(400px,50vw,588px)}
-#homeBenefitSection .title h2{font-size:clamp(1.5rem,3vw,2.25rem);margin-bottom:1rem;line-height:clamp(2rem,4vw,3rem)}
-#homeBenefitSection .title p{font-size:clamp(.875rem,1.5vw,1rem);line-height:clamp(1.25rem,2vw,1.5rem);margin:0}
+#homeBenefitSection .title h2 {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+    line-height: 3rem;
+    font-family: 'SF Pro', sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.045rem;
+}
+#homeBenefitSection .title p {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: -0.025rem;
+}
 #homeBenefitSection .benefits{flex:0 0 clamp(55%, 50%, 55%);display:flex;flex-direction:column;gap:clamp(2rem,4vw,4rem);max-width:600px}
 #homeBenefitSection .benefit-item{padding:clamp(1rem,2vw,1.25rem);border-radius:clamp(16px,2vw,24px);background-color:#fff;display:flex;flex-direction:column;gap:clamp(2rem,3vw,3rem);max-width:100%}
 #homeBenefitSection .bi-image{width:100%;height:clamp(180px,20vw,282px);border-radius:clamp(16px,2vw,24px);background-position:100% 30%;background-size:100% auto}
-#homeBenefitSection .bi-content h3{font-size:clamp(1.5rem,2.5vw,2.25rem);font-weight:600;font-family:'SF Pro Display',sans-serif;margin-bottom:clamp(1rem,2vw,1.75rem)}
-#homeBenefitSection .bi-content p{font-size:clamp(.75rem,1.5vw,.875rem);font-family:'SF Pro Display',sans-serif;font-weight:400;margin-bottom:clamp(.75rem,1.5vw,1.5rem);line-height:clamp(1.25rem,2vw,1.5rem)}
+
+#homeBenefitSection .bi-content {
+    padding: 0 28px 28px;
+}
+
+
+#homeBenefitSection .bi-content h3{font-size:clamp(1.5rem,2.5vw,2.25rem);font-weight:600;font-family:'SF Pro',sans-serif;margin-bottom:clamp(1rem,2vw,1.75rem)}
+#homeBenefitSection .bi-content p{font-size:clamp(.75rem,1.5vw,.875rem);font-family:'SF Pro',sans-serif;font-weight:400;margin-bottom:clamp(.75rem,1.5vw,1.5rem);line-height:clamp(1.25rem,2vw,1.5rem)}
 
 /* MEDIA QUERIES */
 @media(max-width:991px){
@@ -320,7 +289,21 @@ h1, h2, h3, blockquote {
 #homeWhyChooseSection .why-slider{display:flex;flex-wrap:wrap;gap:clamp(8px,1vw,16px);margin-top:clamp(2rem,3vw,4rem)}
 #homeWhyChooseSection .why-slider .col-md-4{padding:0;flex:0 0 calc(33.333% - clamp(8px,1vw,16px))}
 #homeWhyChooseSection .why-item{padding:clamp(1.25rem,2vw,2.25rem);border-radius:16px;background-color:var(--mist);height:clamp(350px,32vw,426px);display:flex;flex-direction:column;justify-content:space-between}
-#homeWhyChooseSection .wi-title{font-size:clamp(1.25rem, 2vw, 1.5rem);font-weight:600;font-family:'SF Pro Display',sans-serif;margin:0 0 clamp(.75rem,2vw,1.25rem)}
+
+#homeWhyChooseSection .why-slider-button .contact-us {
+    background-color: #4c514d;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    font-family: 'SF Pro', sans-serif;
+    font-weight: 500;
+    padding: clamp(8px, 1.5vw, 10px) clamp(16px, 2vw, 24px);
+    border-radius: 25px;
+    border-color: transparent;
+    transition: all .3s ease;
+}
+
+#homeWhyChooseSection .wi-title{font-size:clamp(1.25rem, 2vw, 1.5rem);font-weight:600;font-family:'SF Pro',sans-serif;margin:0 0 clamp(.75rem,2vw,1.25rem)}
 #homeWhyChooseSection .wi-desc{font-size:clamp(.875rem, 1.5vw, 1rem);line-height:1.5;opacity:.6;margin:0}
 #homeWhyChooseSection .tour{background-color:var(--vivid);border-radius:32px;padding:0;overflow:hidden;display:flex}
 #homeWhyChooseSection .tour>.col-md-5,#homeWhyChooseSection .tour>.col-md-7{padding:0}
@@ -501,18 +484,23 @@ h1, h2, h3, blockquote {
 }
 
 #homeGalleryResultSection .gallery-filter-button-group .btn {
-  padding: 10px 24px;
-  border-radius: 25px;
-  font-size: .9rem;
-  background-color: transparent;
-  border: none;
-  color: var(--ebony);
+    padding: 10px 24px;
+    border-radius: 25px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.02rem;
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+    color: var(--ebony);
 }
 
 #homeGalleryResultSection .gallery-filter-button-group .btn.active,
 #homeGalleryResultSection .gallery-filter-button-group .btn:hover {
   background-color: rgba(0,0,0,.06);
 }
+
+
 
 /* Separator */
 #homeGalleryResultSection .gallery-seperator {
@@ -542,17 +530,25 @@ h1, h2, h3, blockquote {
   padding: 12px;
 }
 
+
 #homeGalleryResultSection .gallery-item-title {
-  font-size: 1rem;
-  font-weight: 600;
-  font-family: "SF Pro Display", sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.02rem;
+    line-height: 1.5rem;
+    font-family: "SF Pro", sans-serif;
 }
 
+
 #homeGalleryResultSection .label {
-  font-size: .75rem;
-  padding: 4px 12px;
-  border-radius: 50px;
-  background-color: rgba(0,0,0,.12);
+    font-size: .75rem;
+    line-height: 1.25rem;
+    font-family: 'SF Pro', sans-serif;
+    font-weight: 500;
+    padding: 4px 12px;
+    border-radius: 50px;
+    background-color: rgba(0, 0, 0, .12);
+    letter-spacing: 0.015rem;
 }
 
 #homeGalleryResultSection .gallery-content {
@@ -571,16 +567,19 @@ h1, h2, h3, blockquote {
   position: relative;
 }
 
+
 #homeGalleryResultSection span.ba {
-  position: absolute;
-  bottom: 12px;
-  left: 12px;
-  padding: 6px 10px;
-  border-radius: 50px;
-  font-size: .7rem;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: var(--glo);
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    padding: 6px 10px;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.00875rem;
+    color: var(--glo);
 }
 
 #homeGalleryResultSection span.ba.before {
@@ -661,7 +660,7 @@ h1, h2, h3, blockquote {
 #homeGalleryResultSection .author_content h2 {
   margin: 0;
   font-size: 2.25rem;
-  font-family: 'SF Pro Display', sans-serif;
+  font-family: 'SF Pro', sans-serif;
   font-weight: 600;
   line-height: 2.75rem;
   color: var(--glo);
@@ -782,7 +781,7 @@ h1, h2, h3, blockquote {
 #homeArticleSection>.container{display:flex;flex-direction:column;gap:3.75rem;padding:0 1rem}
 #homeArticleSection .title-section{align-items:center}
 #homeArticleSection .title h2{font-size:3rem;margin:0}
-#homeArticleSection .btn.btn-primary.view-all{padding:10px 24px;border-radius:70px;font-size:1rem;font-family:'SF Pro Display',sans-serif;font-weight:500;background:#4c514d;border-color:#4c514d;color:#fff}
+#homeArticleSection .btn.btn-primary.view-all{padding:10px 24px;border-radius:70px;font-size:1rem;font-family:'SF Pro',sans-serif;font-weight:500;background:#4c514d;border-color:#4c514d;color:#fff}
 #homeArticleSection .blog-loop{padding:28px;background-color:var(--mist);border-radius:24px;border:1px solid rgba(0,0,0,.04);display:grid;grid-template-columns:1fr 1fr;gap:20px}
 #homeArticleSection .blog-item{display:flex;gap:28px;padding:28px;border-radius:16px;background:transparent;align-items:flex-start;border-bottom:1px solid rgba(0,0,0,.02)}
 #homeArticleSection .blog-item:nth-child(odd){border-right:1px solid rgba(0,0,0,.02)}
@@ -791,7 +790,7 @@ h1, h2, h3, blockquote {
 #homeArticleSection .bi-meta{display:flex;justify-content:space-between;align-items:center;gap:12px}
 #homeArticleSection .bi-date{font-size:.95rem;color:rgba(0,0,0,.8)}
 #homeArticleSection .bi-category{font-size:.75rem;padding:6px 12px;border-radius:24px;background-color:rgba(0,0,0,.06);font-weight:500}
-#homeArticleSection .bi-title{font-size:1.125rem;font-weight:600;line-height:1.4;font-family:'SF Pro Display',sans-serif;margin:0}
+#homeArticleSection .bi-title{font-size:1.125rem;font-weight:600;line-height:1.4;font-family:'SF Pro',sans-serif;margin:0}
 
 /* responsive: keep two columns on large tablets, one column on small screens */
 @media(max-width:991px){
@@ -817,13 +816,32 @@ h1, h2, h3, blockquote {
 
 
 
+
+
 #homeFaqSection .faq-section{background:#fff;color:#000}
-#homeFaqSection .faq-title{font-size:2rem;font-weight:600}
-#homeFaqSection .faq-subtitle{color:#555;margin-bottom:2rem}
+
+#homeFaqSection .faq-title {
+    font-size: 3rem;
+    line-height: 3.75rem;
+    font-weight: 400;
+    letter-spacing: -0.06rem;
+}
+
+#homeFaqSection .faq-subtitle {
+    color: #000;
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 2rem;
+    letter-spacing: -0.025rem;
+}
+
+
+
 #homeFaqSection .accordion-item{border:1px solid #eee;border-radius:.75rem;margin-bottom:1rem;overflow:hidden;background:#f9f8f7;box-shadow:0 2px 6px rgba(0,0,0,.04)}
 #homeFaqSection .accordion-flush>.accordion-item{border-radius:1rem}
 #homeFaqSection .accordion-button:focus{box-shadow:none}
-#homeFaqSection .accordion-button{background-color:var(--mist);color:#000;font-size:1.25rem;font-weight:600;padding:1rem 1.25rem;box-shadow:none;line-height:2rem;font-family:'SF Pro Display',sans-serif;border:none;transition:background-color .3s ease}
+#homeFaqSection .accordion-button{background-color:var(--mist);color:#000;font-size:1.25rem;font-weight:600;padding:1rem 1.25rem;box-shadow:none;line-height:2rem;font-family:'SF Pro',sans-serif;border:none;transition:background-color .3s ease}
 #homeFaqSection .accordion-button:hover{background-color:#f1efed}
 #homeFaqSection .accordion-button:not(.collapsed){background-color:#6c635a;color:#fff}
 #homeFaqSection .accordion-button::after{display:none}
@@ -845,13 +863,13 @@ h1, h2, h3, blockquote {
 }
 
 #homeCtaSection .row {
-  position: relative;
-  padding: 6rem 5rem;
-  border-radius: 40px;
-  background-size: cover;
-  background-position: right center;
-  background-repeat: no-repeat;
-  overflow: hidden;
+    position: relative;
+    padding: 3rem 5rem;
+    border-radius: 40px;
+    background-size: cover;
+    background-position: center 35%;
+    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 /* Strong white gradient on left */
@@ -859,10 +877,17 @@ h1, h2, h3, blockquote {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, #ffffff 0%, rgba(255,255,255,0.65) 35%, rgba(255,255,255,0) 60%);
+  background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.65) 35%, rgba(255, 255, 255, 0) 60%);
+  
   border-radius: inherit;
   z-index: 0;
 }
+
+#homeCtaSection .row .col-md-6 {
+    padding: 0;
+}
+
+
 
 /* Content container */
 #homeCtaSection .row .col-md-6 {
@@ -876,15 +901,19 @@ h1, h2, h3, blockquote {
 
 /* Typography */
 #homeCtaSection h2 {
-  font-size: 3.5rem;
-  font-weight: 600;
-  max-width: 460px;
+    font-size: 4rem;
+    line-height: 4.5rem;
+    font-weight: 400;
+    letter-spacing: -0.12rem;
 }
 
+
+
 #homeCtaSection p {
-  font-size: 1.15rem;
-  color: #333;
-  max-width: 460px;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    color: #333;
+    font-weight: 400;
 }
 
 /* Buttons */
@@ -938,6 +967,17 @@ h1, h2, h3, blockquote {
 
   #homeCtaSection h2 {
     font-size: 3rem;
+  }
+}
+
+
+@media (min-width: 1900px) {
+
+  #homeCtaSection h2 {
+    max-width: 536px;
+  }
+  #homeCtaSection p {
+    max-width: 536px;
   }
 }
 
@@ -1054,7 +1094,7 @@ h1, h2, h3, blockquote {
 #footerSection .footer-contact .fw-bold{font-size:.875rem;color:var(--glo)!important;font-weight:500}
 #footerSection .footer-links .widget-title{font-size:.875rem;color:var(--glo)!important;font-weight:400;opacity:70%}
 #footerSection .footer-links a{font-size:1rem;color:var(--glo)!important;font-weight:500;text-decoration:none}
-#footerSection .footer-button a{padding:10px 24px;font-size:1rem;border-radius:32px;font-weight:500;background-color:var(--glo);font-family:'SF Pro Display',sans-serif}
+#footerSection .footer-button a{padding:10px 24px;font-size:1rem;border-radius:32px;font-weight:500;background-color:var(--glo);font-family:'SF Pro',sans-serif}
 #footerSection .copyright .privacy a,.copyright p{font-size:.875rem;color:var(--glo)!important;text-decoration:none;opacity:70%;margin:0}
 #footerSection .copyright p{text-align:right}
 
