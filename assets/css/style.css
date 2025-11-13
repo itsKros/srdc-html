@@ -22,6 +22,17 @@
   font-display: swap;
 }
 
+
+/* =========================
+   SF PRO
+========================= */
+@font-face {
+  font-family: 'SF Pro';
+  src: url('../fonts/sf-pro/SF-Pro.ttf') format('ttf');
+  font-style: normal;
+  font-display: swap;
+}
+
 /* =========================
    SF PRO DISPLAY - REGULAR
 ========================= */
@@ -62,7 +73,7 @@
    GLOBAL FONT USAGE
 ========================= */
 body {
-  font-family: 'SF Pro Display', 
+  font-family: 'SF Pro', 
                -apple-system, BlinkMacSystemFont, 
                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
                'Helvetica Neue', sans-serif;
