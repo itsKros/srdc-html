@@ -26,7 +26,7 @@
    SF PRO DISPLAY - REGULAR
 ========================= */
 @font-face {
-  font-family: 'SF Pro Display';
+  font-family: 'SF Pro';
   src: url('../fonts/sf-pro/SFProDisplay-Regular.woff2') format('woff2'),
        url('../fonts/sf-pro/SFProDisplay-Regular.woff') format('woff');
   font-weight: 400;
@@ -38,7 +38,7 @@
    SF PRO DISPLAY - MEDIUM
 ========================= */
 @font-face {
-  font-family: 'SF Pro Display';
+  font-family: 'SF Pro';
   src: url('../fonts/sf-pro/SFProDisplay-Medium.woff2') format('woff2'),
        url('../fonts/sf-pro/SFProDisplay-Medium.woff') format('woff');
   font-weight: 500;
@@ -50,7 +50,7 @@
    SF PRO DISPLAY - SEMIBOLD
 ========================= */
 @font-face {
-  font-family: 'SF Pro Display';
+  font-family: 'SF Pro';
   src: url('../fonts/sf-pro/SFProDisplay-Semibold.woff2') format('woff2'),
        url('../fonts/sf-pro/SFProDisplay-Semibold.woff') format('woff');
   font-weight: 600;
@@ -62,7 +62,7 @@
    GLOBAL FONT USAGE
 ========================= */
 body {
-  font-family: 'SF Pro Display', 
+  font-family: 'SF Pro', 
                -apple-system, BlinkMacSystemFont, 
                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
                'Helvetica Neue', sans-serif;
@@ -132,6 +132,13 @@ h1, h2, h3, blockquote {
 }
 
 
+@media (max-width: 768px) {
+  br.mhb {
+    display: none;
+  }
+}
+
+
 
 #headerSection{margin-bottom:-124px;padding:clamp(16px,2vw,24px) 0}
 #headerSection>.header-container{width:100%;max-width:clamp(1140px,92vw,1392px);margin:0 auto;padding:0 1rem}
@@ -140,7 +147,7 @@ h1, h2, h3, blockquote {
 #headerSection .nav-link{font-size:clamp(13px, .9vw, 14px);font-family:'SF Pro',sans-serif;color:var(--glo)!important;padding:0!important;transition:color .3s ease}
 #headerSection .nav-link.active,#headerSection .nav-link:hover{color:#fff!important}
 #headerSection .navbar-nav{gap:clamp(16px,2.5vw,32px)}
-#headerSection .top-call{color:var(--glo);font-size:clamp(14px, 1vw, 16px);font-weight:500;font-family:'SF Pro Display',sans-serif;padding:10px 24px;text-decoration:none;line-height:24px;letter-spacing:.32px;background-color:rgba(255,255,255,.12);border-radius:25px;transition:background-color .3s ease,color .3s ease}
+#headerSection .top-call{color:var(--glo);font-size:clamp(14px, 1vw, 16px);font-weight:500;font-family:'SF Pro',sans-serif;padding:10px 24px;text-decoration:none;line-height:24px;letter-spacing:.32px;background-color:rgba(255,255,255,.12);border-radius:25px;transition:background-color .3s ease,color .3s ease}
 #headerSection .top-call:hover{background-color:rgba(255,255,255,.25)}
 .navbar-toggler-icon {
     background-image: url(../imgs/menu.svg);
@@ -177,24 +184,22 @@ h1, h2, h3, blockquote {
     position: absolute;
     width: 100%;
   }
-
-
   #headerSection>.header-container{padding:0px}
   #headerSection>.header-container>nav{border-radius:0px}
-   
   #headerSection .navbar-brand img{max-height:36px}
-
-
   #headerSection .navbar-collapse{padding:.75rem 1rem}
 
 
 
 
 }
+/*HEADER SECTION CSS AND MEDIA QUERIES - ENDS*/
 
 
 
-/*DETAILS HEADER START*/
+
+
+/*DETAILS SECTION HEADER CSS AND MEDIA - STARTS*/
 
 #DetailsheaderSection{margin-bottom:-124px;padding:clamp(16px,2vw,24px) 0}
 #DetailsheaderSection>.header-container{width:100%;max-width:clamp(1140px,92vw,1392px);margin:0 auto;padding:0}
@@ -244,38 +249,65 @@ h1, h2, h3, blockquote {
 
   #DetailsheaderSection>.header-container{padding:0px}
   #DetailsheaderSection>.header-container>nav{border-radius:0px}
-   
   #DetailsheaderSection .navbar-brand img{max-height:36px}
-
-
   #DetailsheaderSection .navbar-collapse{padding:.75rem 1rem}
 
-
-
-
 }
+/*DETAILS SECTION HEADER CSS AND MEDIA - STARTS*/
 
 
-/*DETAILS HEADER END*/
 
 
 
+
+/*CSS FOR BODY OVERFLOW - STARTS*/
 html, body{
     overflow-x: hidden;
 }
 
-/*About Hero Section Start*/
+.line-break-class{
+    display: block;
+}
 
-#AboutHeroSection{background-size:cover;background-repeat:no-repeat; min-height: calc(100vh - 80px);; padding:380px 100px clamp(3rem,4vw,4.75rem);position:relative; margin: 0.75rem;}
+.SF-24{
+font-size:clamp(1.25rem,2vw,1.5rem);
+font-family:'SF Pro',sans-serif;
+font-weight:600;
+margin-bottom:0;
+line-height: 2.25rem;
+letter-spacing: -0.03rem;
+color: var(--glo);
+}
+
+.SF-16-white{
+font-size:1rem;
+font-family:'SF Pro',sans-serif;
+font-weight:400;
+margin-bottom:0;
+line-height: 1.5rem;
+letter-spacing: -0.015rem;
+color: rgba(255, 255, 255,  0.6);
+}
+
+.SF-16-black{
+font-size:1rem;
+font-family:'SF Pro',sans-serif;
+font-weight:400;
+margin-bottom:0;
+line-height: 1.5rem;
+letter-spacing: -0.015rem;
+color: rgba(0, 0, 0,  0.7);
+}
 
 
-/* #AboutHeroSection:before{content:'';position:absolute;width:100%;height:38%;bottom:0;background:linear-gradient(to bottom,transparent 50%,rgba(0,0,0,.62) 92%);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);z-index:1} */
-/* #AboutHeroSection .container *{z-index:2}
-#AboutHeroSection .container .row{ height: 100vh; justify-content:space-between; align-items:flex-end;}
-#AboutHeroSection h1{font-size:clamp(2rem,4vw,3.75rem);line-height:clamp(2.5rem,5vw,72px);color:var(--glo);margin:0}
-#AboutHeroSection .left p{font-size:clamp(1rem,2vw,1.5rem);line-height:clamp(1.5rem,2.5vw,36px);color:rgba(255,255,255,.6);margin:0 0 10px 0}
-#AboutHeroSection .right{gap:clamp(24px,3vw,48px);display:flex;flex-direction:column;align-items:flex-start}
+/*CSS FOR BODY OVERFLOW - ENDS*/
 
+
+
+/*ABOUT HERO SECTION MEDIA QUERIES AND CSS STARTS*/
+
+#AboutHeroSection{background-position: center; background-repeat: no-repeat; border-radius: 16px; height: 100%; min-height: 31.25rem; margin: 0.75rem;}
+#AboutHeroSection .container .row{ height: 100vh;}
 
 
 /* MEDIA QUERIES */
@@ -296,8 +328,7 @@ html, body{
 }
 
 @media (max-width:575px){
-  #AboutHeroSection {
-    background-position: 47% 27%;}
+  #AboutHeroSection {background-position: 28% 27%;}
   #AboutHeroSection h1{font-size:clamp(3rem,5vw,2.5rem);line-height:clamp(3.5rem,5vw,3rem); margin-bottom: 1rem;}
   #AboutHeroSection .left p{font-size:clamp(1rem,3vw,1rem);line-height:clamp(1rem,3vw,1.5rem);  margin-bottom: 1rem;}
   #AboutHeroSection .right p{font-size:clamp(.7rem,3vw,.875rem);}
@@ -307,31 +338,104 @@ html, body{
   }
 }
 
-/*About Hero Section End*/
+@media(max-width: 767px){
+    #AboutHeroSection{
+    height: 100%;
+    min-height:325px;
+    }
+}
+
+/*ABOUT HERO SECTION MEDIA QUERIES AND CSS ENDS*/
 
 
 
-/*About Dental Practise Section Start*/
+/*ABOUT DENTAL SERVICE CONTENT ABOVE SECTION START*/
+
+#AboutDentalserviceSection .title h2 {margin: 0; font-size: 3.5rem; line-height: 4.25rem; letter-spacing: -0.105rem;padding-bottom: 2rem;}
+#AboutDentalserviceSection .title p {margin: 0; font-family:'SF Pro'; padding-bottom: 2rem; font-size: 1rem;font-weight:400;line-height: 1.5rem;letter-spacing: -0.015rem; color: rgba(0, 0, 0,  0.6);}
 
 #AboutDentalserviceSection{padding:clamp(4rem,6vw,5rem) 0 clamp(4rem,6vw,5rem)}
 #AboutDentalserviceSection .title-section{padding-bottom:clamp(2rem,4vw,3.75rem);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between}
-#AboutDentalserviceSection .title h2{font-size:clamp(1.75rem,3vw,3rem);margin:0}
+
+/*MEDIA QUERY*/
+
+/*TABLET*/
+
+@media(max-width: 1024px){#AboutDentalserviceSection .col-md-8.title {width: 92%;}}
+@media(max-width: 767px){
+  #AboutDentalserviceSection .title h2 {
+    margin: 0;
+    font-size: 2.5rem;
+    line-height: 3.25rem;
+    letter-spacing: -0.075rem;
+    padding-bottom: 2rem;
+}
+    #AboutDentalserviceSection .title p {
+        font-size: 0.875rem !important;
+        line-height: 1.25rem !important;
+        letter-spacing: -0.009rem;
+    }
+
+    #AboutDentalserviceSection {
+   padding: 3rem 0 0 0;
+}
+}
+/*ABOUT DENTAL SERVICE CONTENT ABOVE SECTION END*/
 
 
-/*img section*/
-#AboutDentalserviceSection .tour{border-radius:24px;padding:0;overflow:hidden;display:flex}
-#AboutDentalserviceSection .tour>.col-md-5,#homeWhyChooseSection .tour>.col-md-7{padding:0}
-#AboutDentalserviceSection .tour>.col-md-7{padding:22px}
+/*ABOUT DENTAL SERVICE IMAGE SECTION START*/
+#AboutDentalserviceSection .tour{border-radius:24px;padding:0;overflow:hidden;display:flex; justify-content: space-between;}
 #AboutDentalserviceSection .tour .content{padding: 0rem 0rem 2rem 4.5rem;}
-#AboutDentalserviceSection .tour h2{font-size: 2.25rem;line-height: 3rem;margin-bottom: 1.5rem;letter-spacing: -0.045rem;}
+#AboutDentalserviceSection .tour h2{font-family:'SF Pro'; font-size: 2.25rem;line-height: 3rem;margin-bottom: 1.5rem;letter-spacing: -0.045rem;}
 #AboutDentalserviceSection .tour h3{font-family:"SF Pro Display",sans-serif;font-size:1.25rem;line-height:2rem;font-weight:600;margin-bottom:3rem}
-#AboutDentalserviceSection .tour p{opacity:.75;font-size:1.05rem;line-height:1.7rem}
+#AboutDentalserviceSection .tour p{opacity:.75;font-size:1rem;line-height:1.5rem}
 #AboutDentalserviceSection .tour .timage{width:100%;height:100%;background-size:cover;background-position:center center;background-repeat:no-repeat;border-radius:24px}
 
+/*MEDIA QUERY*/
+
+/*TABLET*/
+@media(max-width: 1024px){
+  #AboutDentalServiceSection .col-md-6{width: 50%;}
+  #AboutDentalServiceSection .col-md-5 {
+    width: 50%;
+}
+#AboutDentalserviceSection .tour
+{justify-content: space-between !important;}
+#AboutDentalserviceSection .tour .timage {
+    width: 135%;
+}
+}
+
+@media(max-width: 767px){
+
+     #AboutDentalserviceSection .tour .timage {
+        min-height: 21.75rem;
+        width: 100%;
+        height: 100%;
+    }
+
+#AboutDentalserviceSection .tour {
+    flex-direction: row;
+}
+
+#AboutDentalserviceSection .tour .content {
+    padding: 1rem;
+}
+
+}
+
+#AboutDentalserviceSection .tour {
+    justify-content: center;
+    gap: 0.938rem;
+}
 
 
+/*ABOUT DENTAL SERVICE IMAGE SECTION END*/
 
-/* AUTHOR BOX FIX */
+
+/* AUTHOR CONTENT & IMAGE SECTION START*/
+
+/* AUTHOR BOX */
 #AboutDentalserviceSection .author-box {
   padding: 16px;
   background-color: #4c514d;
@@ -339,18 +443,17 @@ html, body{
   display: flex;
   align-items: center;
   gap: 48px;
-  min-height: 540px;
 }
 
-/* LEFT IMAGE FIX (uses background-image) */
+/* LEFT IMAGE */
 #AboutDentalserviceSection .author_image {
-  flex: 0 0 38%;         /* proportion more like figma */
+  flex: 0 0 38%;         
   border-radius: 32px;
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
   height: 100%;
-  min-height: 25rem;
+  min-height: 30rem;
   background-color: #fff;
 }
 
@@ -359,22 +462,22 @@ html, body{
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;  /* centers content vertically */
+  justify-content: center; 
   gap: 40px;
+  padding: 2.5rem 3.25rem 2.5rem 0;
 }
 
 #AboutDentalserviceSection .author_content img {
-  width: 46px;
+  width:2.875rem;
 }
 
-#AboutDentalserviceSection .author_content h2 {
+#AboutDentalserviceSection .author_content p{
   margin: 0;
   font-size: 2.25rem;
-  font-family: 'SF Pro Display', sans-serif;
   font-weight: 600;
   line-height: 2.75rem;
   color: var(--glo);
-      text-align: left;
+  text-align: left;
 }
 
 /* AUTHOR NAME BLOCK */
@@ -396,6 +499,8 @@ html, body{
   font-size: 1rem;
   color: #fff;
   opacity: 70%;
+  line-height: 1.5rem;
+  letter-spacing: -0.01rem;
 }
 
 /* BUTTONS */
@@ -423,6 +528,74 @@ html, body{
   color: #fff;
 }
 
+@media(max-width: 1024px){
+#AboutDentalserviceSection .author_detail {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.875rem;
+}
+
+#AboutDentalserviceSection .author_image {min-height: 48rem;}
+#storySection .enjoy-service h1 {font-size: 3rem !important;line-height: 3.5rem !important;width: 20.75rem;}
+#storySection .col-md-8 {width: 55%;}
+#storySection .enjoy-service .col-md-4 {width: 42%;}
+#storySection .enjoy-service .col-md-4 p {font-size: 1.5rem;}
+#dentalDifferenceSection .title-section {flex-direction: column;}
+#dentalDifferenceSection .col-lg-6.col-md-8 {padding-top: 0px; width: 93%;}
+#dentalDifferenceSection .col-md-8 .diff-img {width: 100%;height: 100%;min-height: 550px;}
+#dentalDifferenceSection .title-section {background-color: #4C514D;flex-direction: column;justify-content: center;align-items: center;}
+#dentalDifferenceSection .col-lg-6.col-md-3.title {padding: 100px 175px 0px 80px !important;width: 100%;}
+
+#AboutDentalserviceSection .title p {
+    font-size: 2rem;
+    line-height: 2rem;
+   
+}
+
+#AboutDentalserviceSection .tour p {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+}
+}
+
+@media(max-width: 767px){
+
+  #dentalDifferenceSection .col-lg-6.col-md-8
+ {
+    padding-top: 70px !important;
+ }
+  #AboutDentalserviceSection .col-md-12.author-box {
+    flex-direction: column;
+}
+
+    #AboutDentalserviceSection .author_image {
+        min-height: 14rem;
+        width: 100%;
+        height: 100%;
+    }
+
+    #AboutDentalserviceSection .author_content p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2.25rem;
+   
+}
+
+#AboutDentalserviceSection .author_content {
+    padding: 0 0.25rem 1.5rem 0;
+}
+
+#AboutDentalserviceSection .title-section{padding-bottom: 0;}
+
+    #dentalDifferenceSection .col-md-8 .diff-img {
+        min-height: 354px;
+    }
+}
+
+
+/*ENDS*/
 
 
 
@@ -435,21 +608,76 @@ html, body{
     padding: 0;
     overflow: hidden;
     display: flex;
-    margin: 0 20px;
+
 }
-#AboutWhyChooseSection .tour>.col-md-5,#homeWhyChooseSection .tour>.col-md-7{padding:0}
+/* #AboutWhyChooseSection .tour>.col-md-5,#homeWhyChooseSection .tour>.col-md-7{padding:0} */
 #AboutWhyChooseSection .tour>.col-md-7{padding:16px}
 #AboutWhyChooseSection .tour .content{padding:6rem 5rem 6rem 4.5rem}
-#AboutWhyChooseSection .tour h2{font-size:3.5rem;line-height:3.9rem;margin-bottom:1.5rem}
-#AboutWhyChooseSection .tour h3{font-family:"SF Pro Display",sans-serif;font-size:1.25rem;line-height:2rem;font-weight:600;margin-bottom:3rem}
-#AboutWhyChooseSection .tour p{opacity:.75;font-size:1.05rem;line-height:1.7rem}
+#AboutWhyChooseSection .tour h2{font-size:3rem;line-height:3.75rem;margin-bottom:1.5rem; letter-spacing: -0.06rem; color: var(--ebony);width: 17.563rem;}
+#AboutWhyChooseSection .tour h3{font-family:"SF Pro",sans-serif;font-size:1.25rem;line-height:2rem;font-weight:600;margin-bottom:3rem;
+letter-spacing: -0.025rem;}
+#AboutWhyChooseSection .tour p{font-size:1rem;line-height:1.5rem}
 #AboutWhyChooseSection .tour .timage{width:100%;height:100%;background-size:cover;background-position:center right;background-repeat:no-repeat;border-radius:16px}
 
-@media (max-width: 991px) {
+@media (max-width: 1024px) {
   #AboutWhyChooseSection .title-section .statement,#homeWhyChooseSection .title-section .title{flex:0 0 100%;padding: 0;} 
-  #AboutWhyChooseSection .tour{flex-direction:column}
+  /* #AboutWhyChooseSection .tour{flex-direction:column} */
+  
   #AboutWhyChooseSection .tour .content{padding:3rem 2rem}
   #AboutWhyChooseSection .tour .timage{height:350px}
+
+
+
+    #AboutWhyChooseSection .tour {
+        flex-direction: row;
+    }
+
+    
+    #AboutWhyChooseSection .tour .timage {
+        height: 459px;
+        background-position: center;
+    }
+
+    #AboutWhyChooseSection .col-md-7, #AboutWhyChooseSection .col-md-5{
+   
+    width: 50%;
+ }
+
+ 
+}
+
+
+@media(max-width: 767px){
+  #AboutWhyChooseSection .tour {
+        flex-direction: column;
+        background-color: #C5DBFB;
+        margin: 0;
+    }
+
+        #AboutWhyChooseSection .col-md-7, #AboutWhyChooseSection .col-md-5 {
+        width: 100%;
+    }
+
+        #AboutWhyChooseSection .tour .content {
+        padding: 3rem 1rem;
+    }
+
+    #AboutWhyChooseSection .tour h2 {
+    font-size: 2.5rem;
+    line-height: 3.25rem;
+}
+
+#AboutWhyChooseSection .tour p {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+#dentalDifferenceSection .col-lg-6.col-md-3.title {
+        padding: 40px 27px 0px 33px !important;
+        width: 100%;
+    }
+
+
 }
 /*Why choose us ends*/
 
@@ -460,7 +688,7 @@ html, body{
 }
 
 #dentalDifferenceSection .col-md-8 .diff-img{
-width: 100%;
+    width: 100%;
     height: 100%;
     background-size: cover;
     background-position: center center;
@@ -478,6 +706,7 @@ width: 100%;
 }
 
 #dentalDifferenceSection .title h3 {
+    font-family:'SF Pro';
     font-size: 1.5rem;
     line-height: 2.25rem;
     letter-spacing: -0.03rem;
@@ -486,9 +715,9 @@ width: 100%;
 }
 
 #dentalDifferenceSection .title p {
-    font-size: 1.05rem;
-    line-height: 1.7rem;
-    letter-spacing: -0.015rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.01rem;
     color:rgba(255, 255, 255, 0.6);
     padding-bottom: 48px;
 }
@@ -499,8 +728,8 @@ width: 100%;
 
 
 
-#dentalDifferenceSection .col-lg-6.col-md-4.title {
-   padding: 335px 65px 197px 80px;
+#dentalDifferenceSection .col-lg-6.col-md-3.title {
+   padding: 335px 175px 197px 80px;
 }
 
 #dentalDifferenceSection a.btn.btn-light.contact-btn {
@@ -533,10 +762,9 @@ width: 100%;
     padding-top: 60px;
 }
 
-.story-img-container {
+#storySection .story-img-container {
     
     width: 100%;
-    padding: 0 60px;
 }
 
 #storySection .col-md-12 .diff-img{
@@ -553,7 +781,7 @@ width: 100%;
 
 .story-img-content {
     background: #C5DBFB;
-    width: 31.67%;
+    width: 29.063rem;
     border-radius:18px;
     padding:40px;
     Gap: 48px;   
@@ -562,20 +790,20 @@ width: 100%;
 
 #storySection .story-img-content h2{
 
-
-font-weight: 510;
+ 
+font-family:'SF Pro';
 font-size: 2.25rem;
 line-height: 3rem;
 letter-spacing: -0.045rem;
-font-weight: 510;
+font-weight: 500;
 padding-bottom: 3rem;
 }
 
 
 #storySection .story-img-content p {
-    font-size: 1.05rem;
-    line-height: 1.7rem;
-    letter-spacing: -0.015rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.01rem;
     color:rgba(0, 0, 0,  0.6);
     padding-bottom: 48px;
 }
@@ -609,29 +837,43 @@ width: 10%;
 
 
 #storySection .story-grid.d-flex {
-    padding: 5rem 3.75rem;
+    padding: 5rem 0;
     gap: 3.75rem;
 }
 
 
 #storySection .profile-content h3
  {
-    font-size: clamp(1.25rem, 2vw, 1.5rem);
-    font-family: 'SF Pro Display', sans-serif;
+    font-size: 1.25rem;
+    font-family: 'SF Pro', sans-serif;
     font-weight: 600;
     margin-bottom: 0;
+    line-height: 2rem;
+    letter-spacing: -0.025rem;
+    color: var(--ebony);
+}
+
+#storySection .grid-content p{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: -0.025rem;
+}
+
+#storySection .grid-1 {
+    width: 25rem;
 }
 
 #storySection .profile-section.d-flex {
     padding: 2.375rem 0;
 }
 
-.w-80{
-    width: 92%
-}
 
 #storySection .enjoy-service.d-flex {
-    padding: 5rem 3.75rem;
+    padding: 5rem 0;
+}
+
+.profile-content {
+    width: 5.375rem;
 }
 
 #storySection a.btn.btn-light.contact-btn {
@@ -661,6 +903,50 @@ width: 10%;
     padding-bottom: 17px;
 }
 
+
+@media(max-width: 767px){
+   #storySection .col-md-12 .diff-img {
+ 
+    background-position: 44%;
+ 
+}
+
+.story-img-content {
+    margin-top: 849px;
+}
+
+#storySection .story-grid.d-flex {
+    padding: 3rem 0;
+    flex-direction: column;
+}
+
+#storySection .grid-1 {
+    width: 100%;
+}
+
+#storySection .enjoy-service.d-flex {
+    padding: 3rem 0;
+    flex-direction: column;
+}
+
+#storySection .enjoy-service .col-md-4 {
+        width: 100%;
+    }
+
+     #storySection .col-md-8, #storySection .enjoy-service h1 {
+        width: 100% !important;
+        font-size: 2.5rem !important;
+        line-height: 3.25rem !important;
+        width: 100%;
+    }
+
+        #storySection .enjoy-service .col-md-4 p {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        letter-spacing: -0.018rem;
+        padding-bottom: 1.813rem;
+    }
+}
 /*Story Section ends*/
 
 
@@ -895,6 +1181,7 @@ width: 10%;
 
       #homeCtaSection .row .col-md-6 {
         align-items: flex-start;
+        width: 100%;
     }
   
     #homeCtaSection h2 {
@@ -964,66 +1251,90 @@ width: 10%;
 
 /*Home Section Starts*/
 
-.line-break-class{
-    display: block;
-}
-
-.SF-24{
-font-size:clamp(1.25rem,2vw,1.5rem);
-font-family:'SF Pro Display',sans-serif;
-font-weight:600;
-margin-bottom:0;
-line-height: 2.25rem;
-letter-spacing: -0.03rem;
-color: var(--glo);
-}
-
-.SF-16{
-font-size:1rem;
-font-family:'SF Pro Display',sans-serif;
-font-weight:400;
-margin-bottom:0;
-line-height: 1.5rem;
-letter-spacing: -0.015rem;
-color: rgba(255, 255, 255,  0.6);
-}
-
-
-
-#ServiceHeroSection .left {
+/*BANNER SECTION*/
+ #ServiceHeroSection .left {
     
     border-top-left-radius: 24px;
     border-bottom-left-radius: 24px;
-    padding: 30.313rem 2rem 0 4.25rem;
+    padding: 30.313rem 0 0 0;
 
 }
 
 #ServiceHeroSection {
     position: relative;
-    background-size: cover;
     background-position: 545px -28px;
     background-repeat: no-repeat;
     margin: 12px;
     padding-bottom: 6rem;
 border-radius: 24px;
 
-}
+} 
 
 #ServiceHeroSection::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 50%;
+    width: 53%;
     height: 100%;
     background: linear-gradient(to right, #f2f0ed 80%, rgba(255, 255, 255, 0) 100%);
     border-radius: 24px;
+    z-index: 1;
 }
 
 #ServiceHeroSection .title-section {
   position: relative;
   z-index: 2;
+} 
+
+#ServiceHeroSection .hero-img {
+    position: absolute;
+    top: 0;
+    right: 0;                /* sits on the right */
+    width: 60%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+    border-radius: 24px;
 }
+
+@media (max-width: 768px) {
+
+    #ServiceHeroSection .hero-img {
+        width: 100%;
+        height: 50%;
+        bottom: 0;              /* sits at the bottom */
+        top: auto;
+        right: 0;
+    }
+
+    #ServiceHeroSection::before {
+        width: 100%;
+        height: 70%;
+        background: linear-gradient(
+            to bottom,
+            #f2f0ed 80%,
+            transparent 100%
+        );
+    }
+
+    #ServiceHeroSection .left {
+        padding: 4rem 1.5rem 7rem;
+    }
+
+    #ServiceHeroSection {
+    padding-bottom: 14rem;
+}
+
+#ServiceHeroSection .left h1 {
+    font-size: 2.5rem !important;
+    line-height: 3rem !important;
+}
+
+}
+
+
 
 
 
@@ -1047,18 +1358,14 @@ letter-spacing: -0.105rem; color: var(--ebony); padding-bottom: 2rem;}
   #ServiceHeroSection .right{gap:24px}
 
   #ServiceHeroSection .container .row {
-    padding-top: 28rem;
+    padding-top: 3rem;
     height: auto;
     justify-content: space-between;
     align-items: unset;
-    padding-left: 0.5rem;
-        padding-right: 0.5rem;
   }
 }
 
 @media (max-width:575px){
-  #ServiceHeroSection {
-    background-position: 47% 27%;}
   #ServiceHeroSection h1{font-size:clamp(3rem,5vw,2.5rem);line-height:clamp(3.5rem,5vw,3rem); margin-bottom: 1rem;}
   #ServiceHeroSection .left p{font-size:clamp(1rem,3vw,1rem);line-height:clamp(1rem,3vw,1.5rem);  margin-bottom: 1rem;}
   #ServiceHeroSection .right p{font-size:clamp(.7rem,3vw,.875rem);}
@@ -1068,7 +1375,7 @@ letter-spacing: -0.105rem; color: var(--ebony); padding-bottom: 2rem;}
   }
 }
 
-
+/*BANNER SECTION*/
 /*Home Section Ends*/
 
 
@@ -1112,6 +1419,13 @@ background-color: #4C514D;
 
 #ServiceUspSection .uspContent h3{
     padding-bottom: 3.75rem;
+}
+
+@media (max-width: 767px){
+  
+  #ServiceUspSection{
+    display: none !important;
+  }
 }
 
 

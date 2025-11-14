@@ -26,7 +26,7 @@
    SF PRO DISPLAY - REGULAR
 ========================= */
 @font-face {
-  font-family: 'SF Pro Display';
+  font-family: 'SF Pro';
   src: url('../fonts/sf-pro/SFProDisplay-Regular.woff2') format('woff2'),
        url('../fonts/sf-pro/SFProDisplay-Regular.woff') format('woff');
   font-weight: 400;
@@ -38,7 +38,7 @@
    SF PRO DISPLAY - MEDIUM
 ========================= */
 @font-face {
-  font-family: 'SF Pro Display';
+  font-family: 'SF Pro';
   src: url('../fonts/sf-pro/SFProDisplay-Medium.woff2') format('woff2'),
        url('../fonts/sf-pro/SFProDisplay-Medium.woff') format('woff');
   font-weight: 500;
@@ -50,7 +50,7 @@
    SF PRO DISPLAY - SEMIBOLD
 ========================= */
 @font-face {
-  font-family: 'SF Pro Display';
+  font-family: 'SF Pro';
   src: url('../fonts/sf-pro/SFProDisplay-Semibold.woff2') format('woff2'),
        url('../fonts/sf-pro/SFProDisplay-Semibold.woff') format('woff');
   font-weight: 600;
@@ -62,7 +62,7 @@
    GLOBAL FONT USAGE
 ========================= */
 body {
-  font-family: 'SF Pro Display', 
+  font-family: 'SF Pro', 
                -apple-system, BlinkMacSystemFont, 
                'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
                'Helvetica Neue', sans-serif;
@@ -132,7 +132,14 @@ h1, h2, h3, blockquote {
 }
 
 
+@media (max-width: 768px) {
+  br.mhb {
+    display: none;
+  }
+}
 
+
+/*HEADER SECTION CSS AND MEDIA QUERIES - STARTS*/
 #headerSection{margin-bottom:-124px;padding:clamp(16px,2vw,24px) 0}
 #headerSection>.header-container{width:100%;max-width:clamp(1140px,92vw,1392px);margin:0 auto;padding:0 1rem}
 #headerSection>.header-container>nav{background-color:rgba(76,81,77,.6)!important;border-radius:100px;padding:clamp(12px,1.5vw,16px);backdrop-filter:blur(44px);-webkit-backdrop-filter:blur(44px);display:flex;align-items:center;justify-content:space-between}
@@ -152,7 +159,7 @@ h1, h2, h3, blockquote {
 }
 
 @media (max-width: 991px) {
-  #headerSection > .header-container>nav{border-radius:40px;padding:12px 20px}
+   #headerSection > .header-container>nav{border-radius:40px;padding:12px 20px}
   #headerSection .navbar-collapse{background-color:rgba(76,81,77,.85);border-radius:20px;margin-top:12px;padding:1rem}
   #headerSection .navbar-nav{gap:1rem;align-items:center}
   #headerSection .top-call{order:3}
@@ -179,36 +186,96 @@ h1, h2, h3, blockquote {
   }
 
 
-  #headerSection>.header-container{padding:0px}
-  #headerSection>.header-container>nav{border-radius:0px}
-   
+  #headerSection>.header-container{padding:0px} 
+  #headerSection>.header-container>nav{border-radius:0px} 
   #headerSection .navbar-brand img{max-height:36px}
-
-
   #headerSection .navbar-collapse{padding:.75rem 1rem}
-
-
-
 
 }
 
 
+/*HEADER SECTION CSS AND MEDIA QUERIES - ENDS*/
 
+/*DETAILS SECTION HEADER CSS AND MEDIA - STARTS*/
+
+#DetailsheaderSection{margin-bottom:-124px;padding:clamp(16px,2vw,24px) 0}
+#DetailsheaderSection>.header-container{width:100%;max-width:clamp(1140px,92vw,1392px);margin:0 auto;padding:0}
+#DetailsheaderSection>.header-container>nav{background-color:rgba(0,0,0,.24)!important;border-radius:100px;padding:clamp(12px,1.5vw,16px);backdrop-filter:blur(44px);-webkit-backdrop-filter:blur(44px);display:flex;align-items:center;justify-content:space-between}
+#DetailsheaderSection .navbar-brand img{max-height:clamp(36px,4vw,48px);width:auto}
+#DetailsheaderSection .nav-link{font-size:clamp(13px, .9vw, 14px);font-family:'SF Pro',sans-serif;color:var(--glo)!important;padding:0!important;transition:color .3s ease}
+#DetailsheaderSection .nav-link.active,#DetailsheaderSection .nav-link:hover{color:#fff!important}
+#DetailsheaderSection .navbar-nav{gap:clamp(16px,2.5vw,32px)}
+#DetailsheaderSection .top-call{color:var(--glo);font-size:clamp(14px, 1vw, 16px);font-weight:500;font-family:'SF Pro Display',sans-serif;padding:10px 24px;text-decoration:none;line-height:24px;letter-spacing:.32px;background-color:rgba(255,255,255,.12);border-radius:25px;transition:background-color .3s ease,color .3s ease}
+#DetailsheaderSection .top-call:hover{background-color:rgba(255,255,255,.25)}
+.navbar-toggler-icon {
+    background-image: url(../imgs/menu.svg);
+}
+
+/* MEDIA QUERIES */
+@media (min-width: 1920px) {
+  #DetailsheaderSection > .header-container {max-width: 1440px;}
+}
+
+@media (max-width: 991px) {
+  #DetailsheaderSection > .header-container>nav{border-radius:40px;padding:12px 20px}
+  #DetailsheaderSection .navbar-collapse{background-color:rgba(76,81,77,.85);border-radius:20px;margin-top:12px;padding:1rem}
+  #DetailsheaderSection .navbar-nav{gap:1rem;align-items:center}
+  #DetailsheaderSection .top-call{order:3}
+  #DetailsheaderSection .navbar-toggler {
+    order: 1;
+            padding: 0;
+        border: 0;
+  }
+  #DetailsheaderSection .navbar-brand {
+    order: 2;
+  }
+   #DetailsheaderSection .navbar-collapse{ 
+    order:4;
+   }
+
+}
+
+@media (max-width: 575px) {
+  #DetailsheaderSection {
+    margin-bottom: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+
+  #DetailsheaderSection>.header-container{padding:0px}
+  #DetailsheaderSection>.header-container>nav{border-radius:0px}
+  #DetailsheaderSection .navbar-brand img{max-height:36px}
+  #DetailsheaderSection .navbar-collapse{padding:.75rem 1rem}
+
+}
+/*DETAILS SECTION HEADER CSS AND MEDIA - STARTS*/
+
+
+/*CSS FOR BODY OVERFLOW - STARTS*/
 html, body{
     overflow-x: hidden;
 }
+/*CSS FOR BODY OVERFLOW - ENDS*/
 
-/*About Hero Section Start*/
 
-#AboutHeroSection{background-size:cover;background-repeat:no-repeat; height: 100vh; padding:380px 100px clamp(3rem,4vw,4.75rem);position:relative}
-/* #AboutHeroSection:before{content:'';position:absolute;width:100%;height:38%;bottom:0;background:linear-gradient(to bottom,transparent 50%,rgba(0,0,0,.62) 92%);backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);z-index:1} */
-/* #AboutHeroSection .container *{z-index:2}
-#AboutHeroSection .container .row{ height: 100vh; justify-content:space-between; align-items:flex-end;}
-#AboutHeroSection h1{font-size:clamp(2rem,4vw,3.75rem);line-height:clamp(2.5rem,5vw,72px);color:var(--glo);margin:0}
-#AboutHeroSection .left p{font-size:clamp(1rem,2vw,1.5rem);line-height:clamp(1.5rem,2.5vw,36px);color:rgba(255,255,255,.6);margin:0 0 10px 0}
-#AboutHeroSection .right{gap:clamp(24px,3vw,48px);display:flex;flex-direction:column;align-items:flex-start}
-#AboutHeroSection .right p{color:var(--glo);font-size:clamp(.875rem,1.5vw,1.125rem);margin:0}
-#AboutHeroSection .right .btn{padding:clamp(8px,1vw,10px) clamp(16px,2vw,24px);font-size:clamp(.875rem,1vw,1rem);border-radius:32px;font-weight:500;background-color:var(--glo);font-family:'SF Pro Display',sans-serif} */
+
+/*ABOUT HERO SECTION MEDIA QUERIES AND CSS STARTS*/
+
+#AboutHeroSection{
+
+  background-size: cover;         /* fills the container, cropping if needed */
+  background-position: center;    /* keeps main focus centered */
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  height: 100%;                   /* make it fill the height of its row */
+  min-height: 31.25rem; 
+  margin: 0.75rem; 
+}
+
+#AboutHeroSection .container .row{ height: 100vh;}
+
 
 /* MEDIA QUERIES */
 @media (max-width:991px){
@@ -229,7 +296,7 @@ html, body{
 
 @media (max-width:575px){
   #AboutHeroSection {
-    background-position: 47% 27%;}
+    background-position: 28% 27%;}
   #AboutHeroSection h1{font-size:clamp(3rem,5vw,2.5rem);line-height:clamp(3.5rem,5vw,3rem); margin-bottom: 1rem;}
   #AboutHeroSection .left p{font-size:clamp(1rem,3vw,1rem);line-height:clamp(1rem,3vw,1.5rem);  margin-bottom: 1rem;}
   #AboutHeroSection .right p{font-size:clamp(.7rem,3vw,.875rem);}
@@ -239,88 +306,155 @@ html, body{
   }
 }
 
-/*About Hero Section End*/
+@media(max-width: 767px){
+    
+    #AboutHeroSection{
+    height: 100%;
+    min-height:325px;
+    }
+}
+
+/*ABOUT HERO SECTION MEDIA QUERIES AND CSS ENDS*/
 
 
 
-/*About Dental Practise Section Start*/
+/*ABOUT DENTAL SERVICE CONTENT ABOVE SECTION START*/
 
-#homeServiceSection{padding:clamp(4rem,6vw,5rem) 0 clamp(4rem,6vw,5rem)}
-#homeServiceSection .title-section{padding-bottom:clamp(2rem,4vw,3.75rem);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between}
-#homeServiceSection .title h2{font-size:clamp(1.75rem,3vw,3rem);margin:0}
+#AboutDentalserviceSection .title h2 {margin: 0; font-size: 3.5rem; line-height: 4.25rem; letter-spacing: -0.105rem;padding-bottom: 2rem;}
+#AboutDentalserviceSection .title p {margin: 0; font-family:'SF Pro'; padding-bottom: 2rem; font-size: 1rem;font-weight:400;line-height: 1.5rem;letter-spacing: -0.015rem; color: rgba(0, 0, 0,  0.6);}
+
+#AboutDentalserviceSection{padding:clamp(4rem,6vw,5rem) 0 clamp(4rem,6vw,5rem)}
+#AboutDentalserviceSection .title-section{padding-bottom:clamp(2rem,4vw,3.75rem);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between}
+
+/*MEDIA QUERY*/
+
+/*TABLET*/
+
+@media(max-width: 1024px){.col-md-8.title {width: 92%;}}
+@media(max-width: 767px){
+  #AboutDentalserviceSection .title h2 {
+    margin: 0;
+    font-size: 2.5rem;
+    line-height: 3.25rem;
+    letter-spacing: -0.075rem;
+    padding-bottom: 2rem;
+}
+    #AboutDentalserviceSection .title p {
+        font-size: 0.875rem !important;
+        line-height: 1.25rem !important;
+        letter-spacing: -0.009rem;
+    }
+
+    #AboutDentalserviceSection {
+   padding: 3rem 0 0 0;
+}
+}
+/*ABOUT DENTAL SERVICE CONTENT ABOVE SECTION END*/
 
 
-/*img section*/
-#homeServiceSection .tour{border-radius:24px;padding:0;overflow:hidden;display:flex}
-#homeServiceSection .tour>.col-md-5,#homeWhyChooseSection .tour>.col-md-7{padding:0}
-#homeServiceSection .tour>.col-md-7{padding:22px}
-#homeServiceSection .tour .content{padding: 0rem 0rem 2rem 4.5rem;}
-#homeServiceSection .tour h2{font-size: 2.25rem;line-height: 3rem;margin-bottom: 1.5rem;letter-spacing: -0.045rem;}
-#homeServiceSection .tour h3{font-family:"SF Pro Display",sans-serif;font-size:1.25rem;line-height:2rem;font-weight:600;margin-bottom:3rem}
-#homeServiceSection .tour p{opacity:.75;font-size:1.05rem;line-height:1.7rem}
-#homeServiceSection .tour .timage{width:100%;height:100%;background-size:cover;background-position:center center;background-repeat:no-repeat;border-radius:24px}
+/*ABOUT DENTAL SERVICE IMAGE SECTION START*/
+#AboutDentalserviceSection .tour{border-radius:24px;padding:0;overflow:hidden;display:flex; justify-content: space-between;}
+#AboutDentalserviceSection .tour .content{padding: 0rem 0rem 2rem 4.5rem;}
+#AboutDentalserviceSection .tour h2{font-family:'SF Pro'; font-size: 2.25rem;line-height: 3rem;margin-bottom: 1.5rem;letter-spacing: -0.045rem;}
+#AboutDentalserviceSection .tour h3{font-family:"SF Pro Display",sans-serif;font-size:1.25rem;line-height:2rem;font-weight:600;margin-bottom:3rem}
+#AboutDentalserviceSection .tour p{opacity:.75;font-size:1rem;line-height:1.5rem}
+#AboutDentalserviceSection .tour .timage{width:100%;height:100%;background-size:cover;background-position:center center;background-repeat:no-repeat;border-radius:24px}
+
+/*MEDIA QUERY*/
+
+/*TABLET*/
+@media(max-width: 1024px){
+  #AboutDentalServiceSection .col-md-6{width: 50%;}
+  #AboutDentalServiceSection .col-md-5 {
+    width: 50%;
+}
+#AboutDentalserviceSection .tour .timage {
+    width: 116%;
+}
+}
+
+@media(max-width: 767px){
+
+     #AboutDentalserviceSection .tour .timage {
+        min-height: 21.75rem;
+        width: 100%;
+        height: 100%;
+    }
+
+#AboutDentalserviceSection .tour {
+    flex-direction: row;
+}
+
+#AboutDentalserviceSection .tour .content {
+    padding: 1rem;
+}
+
+}
+
+#AboutDentalserviceSection .tour {
+    justify-content: center;
+    gap: 0.938rem;
+}
 
 
+/*ABOUT DENTAL SERVICE IMAGE SECTION END*/
 
 
-/* AUTHOR BOX FIX */
-#homeGalleryResultSection .author-box {
+/* AUTHOR CONTENT & IMAGE SECTION START*/
+
+/* AUTHOR BOX */
+#AboutDentalserviceSection .author-box {
   padding: 16px;
   background-color: #4c514d;
   border-radius: 48px;
   display: flex;
   align-items: center;
   gap: 48px;
-
-  /* Ensures the container grows properly */
-  min-height: 540px;
 }
 
-/* LEFT IMAGE FIX (uses background-image) */
-#homeGalleryResultSection .author_image {
-  flex: 0 0 38%;         /* proportion more like figma */
+/* LEFT IMAGE */
+#AboutDentalserviceSection .author_image {
+  flex: 0 0 38%;         
   border-radius: 32px;
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-
-  /* This forces the image block to always have height */
   height: 100%;
-  min-height: 100%;
+  min-height: 30rem;
   background-color: #fff;
 }
 
 /* RIGHT CONTENT AREA */
-#homeGalleryResultSection .author_content {
+#AboutDentalserviceSection .author_content {
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;  /* centers content vertically */
+  justify-content: center; 
   gap: 40px;
+  padding: 2.5rem 3.25rem 2.5rem 0;
 }
 
-#homeGalleryResultSection .author_content img {
-  width: 46px;
+#AboutDentalserviceSection .author_content img {
+  width:2.875rem;
 }
 
-#homeGalleryResultSection .author_content h2 {
+#AboutDentalserviceSection .author_content p{
   margin: 0;
   font-size: 2.25rem;
-  font-family: 'SF Pro Display', sans-serif;
   font-weight: 600;
   line-height: 2.75rem;
   color: var(--glo);
-      text-align: left;
+  text-align: left;
 }
 
 /* AUTHOR NAME BLOCK */
-#homeGalleryResultSection .author_detail {
+#AboutDentalserviceSection .author_detail {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-#homeGalleryResultSection .author_name h4 {
+#AboutDentalserviceSection .author_name h4 {
   font-size: 1.5rem;
   color: #fff;
   line-height: 2.25rem;
@@ -328,20 +462,22 @@ html, body{
   margin-bottom: 8px;
 }
 
-#homeGalleryResultSection .author_name span {
+#AboutDentalserviceSection .author_name span {
   font-size: 1rem;
   color: #fff;
   opacity: 70%;
+  line-height: 1.5rem;
+  letter-spacing: -0.01rem;
 }
 
 /* BUTTONS */
-#homeGalleryResultSection .author_contact {
+#AboutDentalserviceSection .author_contact {
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
-#homeGalleryResultSection .author_contact .btn {
+#AboutDentalserviceSection .author_contact .btn {
   padding: 10px 24px;
   border-radius: 70px;
   font-size: 1rem;
@@ -349,35 +485,206 @@ html, body{
   border: 0;
 }
 
-#homeGalleryResultSection .author_contact .btn.btn-light {
+#AboutDentalserviceSection .author_contact .btn.btn-light {
   background-color: #fff;
   color: #000;
 }
 
-#homeGalleryResultSection .author_contact .btn.btn-dark {
+#AboutDentalserviceSection .author_contact .btn.btn-dark {
   background-color: rgba(255, 255, 255, 0.12);
   color: #fff;
 }
 
+@media(max-width: 1024px){
+#AboutDentalserviceSection .author_detail {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: start;
+    gap: 1.875rem;
+}
+
+#AboutDentalserviceSection .author_image {
+    min-height: 48rem;
+}
+
+
+#storySection .enjoy-service h1 {
+    font-size: 3rem !important;
+    line-height: 3.5rem !important;
+    width: 20.75rem;
+}
+
+#storySection .col-md-8 {
+    width: 55%;
+}
+
+#storySection .enjoy-service .col-md-4 {
+    width: 42%;
+}
+
+#storySection .enjoy-service .col-md-4 p {
+    font-size: 1.5rem;
+}
+
+
+#dentalDifferenceSection .title-section {
+    flex-direction: column;
+}
+
+#dentalDifferenceSection .col-lg-6.col-md-8 {
+    padding-top: 0px;
+    width: 93%;
+}
+
+#dentalDifferenceSection .col-md-8 .diff-img {
+    width: 100%;
+    height: 100%;
+    min-height: 550px;
+}
+
+#dentalDifferenceSection .title-section {
+    background-color: #4C514D;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#dentalDifferenceSection .col-lg-6.col-md-3.title {
+    padding: 100px 175px 0px 80px !important;
+    width: 100%;
+}
+
+#AboutDentalserviceSection .title p {
+    font-size: 2rem;
+    line-height: 2rem;
+   
+}
+
+#AboutDentalserviceSection .tour p {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+}
+}
+
+@media(max-width: 767px){
+
+  #dentalDifferenceSection .col-lg-6.col-md-8
+ {
+    padding-top: 70px !important;
+ }
+  #AboutDentalserviceSection .col-md-12.author-box {
+    flex-direction: column;
+}
+
+    #AboutDentalserviceSection .author_image {
+        min-height: 14rem;
+        width: 100%;
+        height: 100%;
+    }
+
+    #AboutDentalserviceSection .author_content p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2.25rem;
+   
+}
+
+#AboutDentalserviceSection .author_content {
+    padding: 0 0.25rem 1.5rem 0;
+}
+
+#AboutDentalserviceSection .title-section{padding-bottom: 0;}
+
+    #dentalDifferenceSection .col-md-8 .diff-img {
+        min-height: 354px;
+    }
+}
+
+
+/*ENDS*/
 
 
 
 
 /*Why choose Us start*/
-#homeWhyChooseSection .tour{background-color:var(--vivid);border-radius:32px;padding:0;overflow:hidden;display:flex}
-#homeWhyChooseSection .tour>.col-md-5,#homeWhyChooseSection .tour>.col-md-7{padding:0}
-#homeWhyChooseSection .tour>.col-md-7{padding:16px}
-#homeWhyChooseSection .tour .content{padding:6rem 5rem 6rem 4.5rem}
-#homeWhyChooseSection .tour h2{font-size:3.5rem;line-height:3.9rem;margin-bottom:1.5rem}
-#homeWhyChooseSection .tour h3{font-family:"SF Pro Display",sans-serif;font-size:1.25rem;line-height:2rem;font-weight:600;margin-bottom:3rem}
-#homeWhyChooseSection .tour p{opacity:.75;font-size:1.05rem;line-height:1.7rem}
-#homeWhyChooseSection .tour .timage{width:100%;height:100%;background-size:cover;background-position:center right;background-repeat:no-repeat;border-radius:16px}
+#AboutWhyChooseSection .tour{
 
-@media (max-width: 991px) {
-  #homeWhyChooseSection .title-section .statement,#homeWhyChooseSection .title-section .title{flex:0 0 100%;padding: 0;} 
-  #homeWhyChooseSection .tour{flex-direction:column}
-  #homeWhyChooseSection .tour .content{padding:3rem 2rem}
-  #homeWhyChooseSection .tour .timage{height:350px}
+    background-color: var(--mist);
+    border-radius: 32px;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+
+}
+/* #AboutWhyChooseSection .tour>.col-md-5,#homeWhyChooseSection .tour>.col-md-7{padding:0} */
+#AboutWhyChooseSection .tour>.col-md-7{padding:16px}
+#AboutWhyChooseSection .tour .content{padding:6rem 5rem 6rem 4.5rem}
+#AboutWhyChooseSection .tour h2{font-size:3rem;line-height:3.75rem;margin-bottom:1.5rem; letter-spacing: -0.06rem; color: var(--ebony);width: 17.563rem;}
+#AboutWhyChooseSection .tour h3{font-family:"SF Pro",sans-serif;font-size:1.25rem;line-height:2rem;font-weight:600;margin-bottom:3rem;
+letter-spacing: -0.025rem;}
+#AboutWhyChooseSection .tour p{font-size:1rem;line-height:1.5rem}
+#AboutWhyChooseSection .tour .timage{width:100%;height:100%;background-size:cover;background-position:center right;background-repeat:no-repeat;border-radius:16px}
+
+@media (max-width: 1024px) {
+  #AboutWhyChooseSection .title-section .statement,#homeWhyChooseSection .title-section .title{flex:0 0 100%;padding: 0;} 
+  /* #AboutWhyChooseSection .tour{flex-direction:column} */
+  
+  #AboutWhyChooseSection .tour .content{padding:3rem 2rem}
+  #AboutWhyChooseSection .tour .timage{height:350px}
+
+
+
+    #AboutWhyChooseSection .tour {
+        flex-direction: row;
+    }
+
+    
+    #AboutWhyChooseSection .tour .timage {
+        height: 459px;
+        background-position: center;
+    }
+
+    #AboutWhyChooseSection .col-md-7, #AboutWhyChooseSection .col-md-5{
+   
+    width: 50%;
+ }
+
+ 
+}
+
+
+@media(max-width: 767px){
+  #AboutWhyChooseSection .tour {
+        flex-direction: column;
+        background-color: #C5DBFB;
+        margin: 0;
+    }
+
+        #AboutWhyChooseSection .col-md-7, #AboutWhyChooseSection .col-md-5 {
+        width: 100%;
+    }
+
+        #AboutWhyChooseSection .tour .content {
+        padding: 3rem 1rem;
+    }
+
+    #AboutWhyChooseSection .tour h2 {
+    font-size: 2.5rem;
+    line-height: 3.25rem;
+}
+
+#AboutWhyChooseSection .tour p {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+#dentalDifferenceSection .col-lg-6.col-md-3.title {
+        padding: 40px 27px 0px 33px !important;
+        width: 100%;
+    }
+
+
 }
 /*Why choose us ends*/
 
@@ -388,7 +695,7 @@ html, body{
 }
 
 #dentalDifferenceSection .col-md-8 .diff-img{
-width: 100%;
+    width: 100%;
     height: 100%;
     background-size: cover;
     background-position: center center;
@@ -406,6 +713,7 @@ width: 100%;
 }
 
 #dentalDifferenceSection .title h3 {
+    font-family:'SF Pro';
     font-size: 1.5rem;
     line-height: 2.25rem;
     letter-spacing: -0.03rem;
@@ -414,19 +722,21 @@ width: 100%;
 }
 
 #dentalDifferenceSection .title p {
-    font-size: 1.05rem;
-    line-height: 1.7rem;
-    letter-spacing: -0.015rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.01rem;
     color:rgba(255, 255, 255, 0.6);
     padding-bottom: 48px;
 }
 
 #dentalDifferenceSection .col-lg-6.col-md-8{
     padding-top: 130px;
-}
+} 
 
-#dentalDifferenceSection .col-lg-6.col-md-4.title {
-   padding: 335px 65px 197px 80px;
+
+
+#dentalDifferenceSection .col-lg-6.col-md-3.title {
+   padding: 335px 175px 197px 80px;
 }
 
 #dentalDifferenceSection a.btn.btn-light.contact-btn {
@@ -449,6 +759,8 @@ width: 100%;
 
 /*Story Section start*/
 
+#storySection{background: #C5DBFB;}
+
 #storySection .col-lg-12.col-md-12 {
     justify-content: center;
     display: flex;
@@ -457,10 +769,9 @@ width: 100%;
     padding-top: 60px;
 }
 
-.story-img-container {
+#storySection .story-img-container {
     
     width: 100%;
-    padding: 0 60px;
 }
 
 #storySection .col-md-12 .diff-img{
@@ -477,7 +788,7 @@ width: 100%;
 
 .story-img-content {
     background: #C5DBFB;
-    width: 31.67%;
+    width: 29.063rem;
     border-radius:18px;
     padding:40px;
     Gap: 48px;   
@@ -486,45 +797,25 @@ width: 100%;
 
 #storySection .story-img-content h2{
 
-
-font-weight: 510;
+ 
+font-family:'SF Pro';
 font-size: 2.25rem;
 line-height: 3rem;
 letter-spacing: -0.045rem;
-font-weight: 510;
+font-weight: 500;
 padding-bottom: 3rem;
 }
 
 
 #storySection .story-img-content p {
-    font-size: 1.05rem;
-    line-height: 1.7rem;
-    letter-spacing: -0.015rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.01rem;
     color:rgba(0, 0, 0,  0.6);
     padding-bottom: 48px;
 }
 
-/* #storySection .col-lg-6.col-md-8{
-    padding-top: 130px;
-}
 
-#storySection .col-lg-6.col-md-4.title {
-   padding: 335px 65px 197px 80px;
-}
-
-#storySection a.btn.btn-light.contact-btn {
-    border-radius: 70px;
-    padding: 10px 24px;
-}
-
-#storySection a.btn.btn-light.contact-btn {
-    border-radius: 70px;
-    padding: 10px 24px;
-    font-weight: 510;
-    font-size: 1.05rem;
-    line-height: 1.7rem;
-    letter-spacing: -0.015rem;
-} */
 
 #storySection .profile-section .profile-img img{
 
@@ -541,11 +832,7 @@ width: 10%;
 
 #storySection .profile-img {
     background: #99A4BF;
-    /* align-items: center; */
-    padding: -1px;
-    /* margin: 0; */
-    align-self: center;
-    padding: 21px;
+    padding: 8px;
     gap: 10px;
     border-radius: 12px;
 }
@@ -554,23 +841,705 @@ width: 10%;
     width: 100%;
     object-fit: cover;
 }
+
+
+#storySection .story-grid.d-flex {
+    padding: 5rem 0;
+    gap: 3.75rem;
+}
+
+
+#storySection .profile-content h3
+ {
+    font-size: 1.25rem;
+    font-family: 'SF Pro', sans-serif;
+    font-weight: 600;
+    margin-bottom: 0;
+    line-height: 2rem;
+    letter-spacing: -0.025rem;
+    color: var(--ebony);
+}
+
+#storySection .grid-content p{
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: -0.025rem;
+}
+
+#storySection .grid-1 {
+    width: 25rem;
+}
+
+#storySection .profile-section.d-flex {
+    padding: 2.375rem 0;
+}
+
+
+#storySection .enjoy-service.d-flex {
+    padding: 5rem 0;
+}
+
+.profile-content {
+    width: 5.375rem;
+}
+
+#storySection a.btn.btn-light.contact-btn {
+    border-radius: 70px;
+    padding: 10px 24px;
+    font-weight: 510;
+    font-size: 1.05rem;
+    line-height: 1.7rem;
+    letter-spacing: -0.015rem;
+}
+
+#storySection .enjoy-service h1 {
+    font-size: 4rem;
+    line-height: 4.5rem;
+    letter-spacing: -0.12rem;
+}
+
+
+#storySection .enjoy-service {
+    padding: 5rem 3.75rem;
+    gap: 13px;
+}
+
+#storySection .enjoy-service .col-md-4 {
+    /* display: flex; */
+    align-self: end;
+    padding-bottom: 17px;
+}
+
+
+@media(max-width: 767px){
+   #storySection .col-md-12 .diff-img {
+ 
+    background-position: 44%;
+ 
+}
+
+.story-img-content {
+    margin-top: 849px;
+}
+
+#storySection .story-grid.d-flex {
+    padding: 3rem 0;
+    flex-direction: column;
+}
+
+#storySection .grid-1 {
+    width: 100%;
+}
+
+#storySection .enjoy-service.d-flex {
+    padding: 3rem 0;
+    flex-direction: column;
+}
+
+#storySection .enjoy-service .col-md-4 {
+        width: 100%;
+    }
+
+     #storySection .col-md-8, #storySection .enjoy-service h1 {
+        width: 100% !important;
+        font-size: 2.5rem !important;
+        line-height: 3.25rem !important;
+        width: 100%;
+    }
+
+        #storySection .enjoy-service .col-md-4 p {
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        letter-spacing: -0.018rem;
+        padding-bottom: 1.813rem;
+    }
+}
 /*Story Section ends*/
 
 
 
+/*About Service Starts*/
+#homeServiceSection{padding:clamp(4rem,6vw,5rem) 0 clamp(4rem,6vw,5rem)}
+#homeServiceSection .title-section{padding-bottom:clamp(2rem,4vw,3.75rem);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between}
+#homeServiceSection .title h2{font-size:clamp(1.75rem,3vw,3rem);margin:0}
+#homeServiceSection .button{display:flex;gap:clamp(8px,2vw,10px);flex-wrap:wrap}
+#homeServiceSection .btn,#homeServiceSection .btn.active,#homeServiceSection .btn:hover,#homeServiceSection .btn.active:hover{padding:clamp(8px,1.5vw,10px) clamp(16px,2vw,24px);border-radius:25px;background-color:transparent;color:var(--ebony);border-color:transparent;transition:all .3s ease}
+#homeServiceSection .btn.active,#homeServiceSection .btn.active:hover,#homeServiceSection .btn:hover{background-color:var(--mist)}
+#homeServiceSection .service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(8px,1.5vw,16px)}
+#homeServiceSection .service-grid .service-item{padding:clamp(8px,1vw,12px);background-color:var(--mist);border-radius:12px;display:flex;flex-direction:column;gap:clamp(16px,2vw,24px)}
+#homeServiceSection .si-image{height:clamp(150px,15vw,215px);background-size:cover;background-position:center;background-repeat:no-repeat;border-radius:8px}
+#homeServiceSection .si-content{padding:clamp(8px,1vw,12px);gap:clamp(24px,3vw,37px);display:flex;flex-direction:column}
+#homeServiceSection .si-content h3{font-size:clamp(1.25rem,2vw,1.5rem);font-family:'SF Pro Display',sans-serif;font-weight:600;margin-bottom:0}
+#homeServiceSection .si-content p{font-size:clamp(.75rem,1.5vw,.875rem);font-family:'SF Pro Display',sans-serif;font-weight:400;margin-bottom:0;color:var(--ebony);opacity:.6}
+#homeServiceSection .btn.contact-us{background-color:#4c514d;color:#fff}
+#homeServiceSection .title-section.look{padding-top:clamp(4rem,8vw,10rem);display:flex;flex-wrap:wrap;align-items:flex-start;gap:clamp(16px,2vw,24px)}
+#homeServiceSection .title-section.look .title{flex:0 0 40%}
+#homeServiceSection .title-section.look .button{flex:0 0 55%;display:flex;flex-direction:column;align-items:flex-start;gap:clamp(12px,2vw,24px)}
+#homeServiceSection .title-section.look p{font-size:clamp(.875rem,1.5vw,1rem);line-height:clamp(1.25rem,2vw,1.5rem);margin:0}
+
+/* MEDIA QUERIES */
+@media (max-width:991px){
+  #homeServiceSection {
+    padding: clamp(4rem, 6vw, 5rem) 1rem clamp(4rem, 6vw, 5rem);
+}
+  #homeServiceSection .service-grid{grid-template-columns:repeat(2,1fr)}
+  #homeServiceSection .btn{font-size:clamp(.75rem,1.5vw,.875rem)}
+  #homeServiceSection .title-section.look .title,
+  #homeServiceSection .title-section.look .button{flex:0 0 100%;}
+}
+@media (max-width:575px){
+  #homeServiceSection .title-section {
+    gap: 20px;}
+  #homeServiceSection .service-grid{grid-template-columns:1fr;gap:clamp(8px,3vw,16px)}
+  #homeServiceSection .title-section.look{padding-top:clamp(2rem,6vw,4rem)}
+  #homeServiceSection .title h2{font-size:clamp(1.5rem,5vw,2.25rem)}
+  #homeServiceSection .title-section.look{padding-top:clamp(2rem,6vw,4rem);gap:clamp(12px,2vw,16px);}
+  #homeServiceSection .title-section.look .title h2{font-size:clamp(1.5rem,5vw,2.25rem);}
+  #homeServiceSection .button {
+    justify-content: flex-start !important;}
+}
+
+
+/*About Service Ends*/
+
+
+
+#homeArticleSection{padding:6.25rem 0}
+#homeArticleSection>.container{display:flex;flex-direction:column;gap:3.75rem;padding:0 1rem}
+#homeArticleSection .title-section{align-items:center}
+#homeArticleSection .title h2{font-size:3rem;margin:0}
+#homeArticleSection .btn.btn-primary.view-all{padding:10px 24px;border-radius:70px;font-size:1rem;font-family:'SF Pro Display',sans-serif;font-weight:500;background:#4c514d;border-color:#4c514d;color:#fff}
+#homeArticleSection .blog-loop{padding:28px;background-color:var(--mist);border-radius:24px;border:1px solid rgba(0,0,0,.04);display:grid;grid-template-columns:1fr 1fr;gap:20px}
+#homeArticleSection .blog-item{display:flex;gap:28px;padding:28px;border-radius:16px;background:transparent;align-items:flex-start;border-bottom:1px solid rgba(0,0,0,.02)}
+#homeArticleSection .blog-item:nth-child(odd){border-right:1px solid rgba(0,0,0,.02)}
+#homeArticleSection .bi-image{flex:0 0 150px;height:150px;border-radius:12px;background-position:center;background-size:cover;background-repeat:no-repeat}
+#homeArticleSection .bi-content{display:flex;flex-direction:column;justify-content:space-between;gap:12px; height: 100%;}
+#homeArticleSection .bi-meta{display:flex;justify-content:space-between;align-items:center;gap:12px}
+#homeArticleSection .bi-date{font-size:.95rem;color:rgba(0,0,0,.8)}
+#homeArticleSection .bi-category{font-size:.75rem;padding:6px 12px;border-radius:24px;background-color:rgba(0,0,0,.06);font-weight:500}
+#homeArticleSection .bi-title{font-size:1.125rem;font-weight:600;line-height:1.4;font-family:'SF Pro Display',sans-serif;margin:0}
+
+/* responsive: keep two columns on large tablets, one column on small screens */
+@media(max-width:991px){
+  #homeArticleSection{padding:6.25rem 1rem}
+  #homeArticleSection .title-section .title {
+    margin-bottom: 20px;
+}
+  #homeArticleSection .title-section .button
+ {
+    align-items: flex-start !important;
+}
+  #homeArticleSection .blog-loop{grid-template-columns:1fr; padding: 0;}
+  #homeArticleSection .blog-item{flex-direction:row;align-items:flex-start;border-right:none}
+  #homeArticleSection .bi-image{flex:0 0 140px;height:140px}
+}
+
+@media(max-width:575px){
+  #homeArticleSection .blog-item{flex-direction:column;align-items:stretch;padding:20px}
+  #homeArticleSection .bi-image{width:100%;height:220px;flex:0 0 auto;border-radius:12px}
+  #homeArticleSection .bi-meta{flex-direction:row;justify-content:space-between}
+  #homeArticleSection .bi-title{font-size:1rem}
+}
+
+
+
+#homeFaqSection .faq-section{background:#fff;color:#000}
+#homeFaqSection .faq-title{font-size:2rem;font-weight:600}
+#homeFaqSection .faq-subtitle{color:#555;margin-bottom:2rem}
+#homeFaqSection .accordion-item{border:1px solid #eee;border-radius:.75rem;margin-bottom:1rem;overflow:hidden;background:#f9f8f7;box-shadow:0 2px 6px rgba(0,0,0,.04)}
+#homeFaqSection .accordion-flush>.accordion-item{border-radius:1rem}
+#homeFaqSection .accordion-button:focus{box-shadow:none}
+#homeFaqSection .accordion-button{background-color:var(--mist);color:#000;font-size:1.25rem;font-weight:600;padding:1rem 1.25rem;box-shadow:none;line-height:2rem;font-family:'SF Pro Display',sans-serif;border:none;transition:background-color .3s ease}
+#homeFaqSection .accordion-button:hover{background-color:#f1efed}
+#homeFaqSection .accordion-button:not(.collapsed){background-color:#6c635a;color:#fff}
+#homeFaqSection .accordion-button::after{display:none}
+#homeFaqSection .accordion-button::before{flex-shrink:0;width:var(--bs-accordion-btn-icon-width);height:var(--bs-accordion-btn-icon-width);margin-left:0;margin-right:17px;content:"";background-image:var(--bs-accordion-btn-icon);background-repeat:no-repeat;background-size:var(--bs-accordion-btn-icon-width);transition:var(--bs-accordion-btn-icon-transition)}
+#homeFaqSection .accordion-button:not(.collapsed)::before{filter:invert(1);transform:rotate(180deg)}
+#homeFaqSection .accordion-body{background-color:var(--mist);color:#444;padding:1rem 1.25rem;font-size:.95rem;line-height:1.6}
+
+@media(max-width:991px){
+#homeFaqSection {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+}
+
+/* CTA SECTION (Matches Figma exactly) */
+
+#homeCtaSection {
+  margin-top: 6rem;
+}
+
+#homeCtaSection .row {
+  position: relative;
+  padding: 6rem 5rem;
+  border-radius: 40px;
+  background-size: cover;
+  background-position: right center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Strong white gradient on left */
+#homeCtaSection .row:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #ffffff 0%, rgba(255,255,255,0.65) 35%, rgba(255,255,255,0) 60%);
+  border-radius: inherit;
+  z-index: 0;
+}
+
+/* Content container */
+#homeCtaSection .row .col-md-6 {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: relative;
+  z-index: 2;
+  align-items: start;
+}
+
+/* Typography */
+#homeCtaSection h2 {
+  font-size: 3.5rem;
+  font-weight: 600;
+  max-width: 460px;
+}
+
+#homeCtaSection p {
+  font-size: 1.15rem;
+  color: #333;
+  max-width: 460px;
+}
+
+/* Buttons */
+#homeCtaSection .cta-btn-group {
+  display: flex;
+  gap: 12px;
+}
+
+#homeCtaSection .cta-btn-group .btn {
+  padding: 12px 28px;
+  border-radius: 60px;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "SF Pro Display", sans-serif;
+  transition: all .25s ease;
+}
+
+/* Primary – Black */
+#homeCtaSection .btn.fom {
+  background: #000;
+  color: #fff;
+}
+
+/* Secondary – Transparent border */
+#homeCtaSection .btn.ot {
+  border: 2px solid #000;
+  background: transparent;
+  color: #000;
+}
+
+#homeCtaSection .btn.fom:hover {
+  opacity: .85;
+}
+
+#homeCtaSection .btn.ot:hover {
+  background: #000;
+  color: #fff;
+}
+
+
+/* ============================
+   ✅ Responsive Media Queries
+   ============================ */
+
+/* Laptop screens (1200px and down) */
+@media (max-width: 1200px) {
+  #homeCtaSection .row {
+    padding: 5rem 3.5rem;
+    background-size: 120%;
+  }
+
+  #homeCtaSection h2 {
+    font-size: 3rem;
+  }
+}
+
+/* Tablet screens (992px and down) */
+@media (max-width: 992px) {
+  #homeCtaSection {
+    margin-top: 6rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+  #homeCtaSection .row {
+    padding: 4rem 2.5rem;
+    flex-direction: column;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+  }
+
+      #homeCtaSection .row:before {
+        background: linear-gradient(359deg, #ffffff 51%, rgba(255, 255, 255, 0) 67%);
+    }
+
+      #homeCtaSection .row .col-md-6 {
+        align-items: flex-start;
+    }
+  
+    #homeCtaSection h2 {
+    
+        text-align: left;
+    }
+    #homeCtaSection p {
+    
+        text-align: left;
+    }
+
+  #homeCtaSection .cta-btn-group {
+    justify-content: center;
+  }
+
+  /* Adjust gradient to lighter opacity so image shows better */
+  #homeCtaSection .row:before {
+    background: linear-gradient(
+      180deg,
+      #ffffff 0%,
+      rgba(255, 255, 255, 0.75) 40%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+}
+
+/* Mobile screens (576px and down) */
+@media (max-width: 576px) {
+  #homeCtaSection .row {
+    padding: 3rem 1.5rem;
+  }
+
+      #homeCtaSection .row {
+        padding: 22rem 1.5rem 3rem;
+        background-position: 72% 0;
+        background-size: 188% auto;
+    }
+
+  #homeCtaSection .row:before {
+        background: linear-gradient(359deg, #ffffff 51%, rgba(255, 255, 255, 0) 67%);
+    }
+
+  #homeCtaSection h2 {
+    font-size: 2.3rem;
+  }
+
+  #homeCtaSection p {
+    font-size: 1rem;
+  }
+
+  #homeCtaSection .cta-btn-group {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  #homeCtaSection .cta-btn-group .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+/*******************************************************************************************************************************************/
+
+/************************************************SERVICE PAGE START***************************************/
+
+/*Home Section Starts*/
+
+.line-break-class{
+    display: block;
+}
+
+.SF-24{
+font-size:clamp(1.25rem,2vw,1.5rem);
+font-family:'SF Pro Display',sans-serif;
+font-weight:600;
+margin-bottom:0;
+line-height: 2.25rem;
+letter-spacing: -0.03rem;
+color: var(--glo);
+}
+
+.SF-16{
+font-size:1rem;
+font-family:'SF Pro Display',sans-serif;
+font-weight:400;
+margin-bottom:0;
+line-height: 1.5rem;
+letter-spacing: -0.015rem;
+color: rgba(255, 255, 255,  0.6);
+}
+
+
+
+#ServiceHeroSection .left {
+    
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+    padding: 30.313rem 2rem 0 4.25rem;
+
+}
+
+#ServiceHeroSection {
+    position: relative;
+    background-size: cover;
+    background-position: 545px -28px;
+    background-repeat: no-repeat;
+    margin: 12px;
+    padding-bottom: 6rem;
+border-radius: 24px;
+
+}
+
+#ServiceHeroSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, #f2f0ed 80%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 24px;
+}
+
+#ServiceHeroSection .title-section {
+  position: relative;
+  z-index: 2;
+}
+
+
+
+/* #ServiceHeroSection .container *{z-index:2} */
+
+#ServiceHeroSection h1{font-size:clamp(2rem,4vw,3.75rem);line-height:clamp(2.5rem,5vw,72px);color:var(--glo);margin:0}
+
+
+
+#ServiceHeroSection .left h1 {font-size: 3.5rem; line-height: 4.25rem;
+letter-spacing: -0.105rem; color: var(--ebony); padding-bottom: 2rem;}   
 
 
 
 
+/* MEDIA QUERIES */
+@media (max-width:991px){
+  #ServiceHeroSection h1{font-size:clamp(1.75rem,4vw,3rem);line-height:clamp(2rem,4vw,3.5rem)}
+  #ServiceHeroSection .left p{font-size:clamp(.875rem,2vw,1.25rem);line-height:clamp(1.25rem,2.5vw,28px)}
+  #ServiceHeroSection .right p{font-size:clamp(.75rem,1.5vw,1rem)}
+  #ServiceHeroSection .right{gap:24px}
+
+  #ServiceHeroSection .container .row {
+    padding-top: 28rem;
+    height: auto;
+    justify-content: space-between;
+    align-items: unset;
+    padding-left: 0.5rem;
+        padding-right: 0.5rem;
+  }
+}
+
+@media (max-width:575px){
+  #ServiceHeroSection {
+    background-position: 47% 27%;}
+  #ServiceHeroSection h1{font-size:clamp(3rem,5vw,2.5rem);line-height:clamp(3.5rem,5vw,3rem); margin-bottom: 1rem;}
+  #ServiceHeroSection .left p{font-size:clamp(1rem,3vw,1rem);line-height:clamp(1rem,3vw,1.5rem);  margin-bottom: 1rem;}
+  #ServiceHeroSection .right p{font-size:clamp(.7rem,3vw,.875rem);}
+  #ServiceHeroSection .right .btn{padding:8px 16px;font-size:.875rem}
+   #ServiceHeroSection .container .row {    
+    justify-content: unset;    
+  }
+}
+
+
+/*Home Section Ends*/
+
+
+/*USP Section Starts*/
+
+#ServiceUspSection{
+background-color: #4C514D;
+}
+
+#ServiceUspSection .container {
+    padding: 5rem 0 6.625rem 0;
+}
+
+#ServiceUspSection .title-section h2{
+    width: 52.813rem;
+    color: var(--bs-body-bg);
+    font-size: 3rem;
+    line-height: 3.75rem;
+    letter-spacing: -0.09rem;
+}
+
+#ServiceUspSection .uspContent.col-md-7 {
+    width: 32.438rem;
+}
+
+#ServiceUspSection .imageSection.d-flex {
+    gap: 8.313rem;
+    padding-top: 3.75rem;
+}
+
+#ServiceUspSection .uspImage.col-md-5{
+
+  background-size: cover;    
+  background-position: center;    
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  height: 100%;                   
+  min-height: 350px;  
+}
+
+
+#ServiceUspSection .uspContent h3{
+    padding-bottom: 3.75rem;
+}
+
+
+/*USP Section Ends*/
+
+
+/*SERVICE DETAILS SECTION STARTS*/
+
+/*HERO SECTION START*/
+
+#DetailsHeroSection{
+    background-color: #4C514D;
+    margin: 12px;
+    border-radius: 16px;
+}
+
+#DetailsHeroSection .details-image.col-md-4{
+
+  background-size: cover;    
+  background-position: center;    
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  height: 100%;                   
+  min-height: 500px; 
+  margin-top: 6.25rem; 
+  margin-bottom: 0.75rem;
+}
+
+#DetailsHeroSection .row.col-md-8 {
+    padding: 15.5rem 0 4.25rem 0;
+}
+
+#DetailsHeroSection .title-section{
+width: 42.625rem;
+}
+
+#DetailsHeroSection a.btn.btn-light.contact-btn {
+    border-radius: 70px;
+    padding: 10px 24px;
+    font-weight: 510;
+    font-size: 1.05rem;
+    line-height: 1.7rem;
+    letter-spacing: -0.015rem;
+}
+
+#DetailsHeroSection .title-section h1{
+    font-size: 3.5rem;
+    line-height: 4.25rem;
+    letter-spacing: -0.105rem;
+    color: var(--glo);
+    padding-bottom: 2rem;
+}
+
+#DetailsHeroSection .title-section p{
+    font-size: 1.25rem;
+    line-height: 2rem;
+    letter-spacing: -0.025rem;
+    color: var(--glo);
+    padding-bottom: 2rem;
+}
+
+/*HERO SECTION END*/
+
+
+/*SECOND SECTION - EXPLANATION POINT START*/
+
+#DetailsExplanationSection .container{
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    text-align: left;
+    padding: 7.5rem 9.75rem;
+}
+
+#DetailsExplanationSection .detail-img img{
+  background-size: cover;         /* fills the container, cropping if needed */
+  background-position: center;    /* keeps main focus centered */
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  height: 100%;                   /* make it fill the height of its row */
+  min-height: 350px;
+}
+
+#DetailsExplanationSection .row.title-section {
+    text-align: center;
+    width: 60.5rem;
+}
+
+
+/*SECOND SECTION - EXPLANATION POINT END*/
+
+/*SERVICE DETAILS SECTION ENDS*/
 
 
 
 
+/*Benefit Section Starts*/
+
+#homeBenefitSection{background-color:var(--indigo);padding:clamp(4rem,6vw,5rem) 0}
+#homeBenefitSection>.container{max-width:clamp(1140px,92vw,1366px);margin:0 auto;padding:0 1rem}
+#homeBenefitSection .row{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:clamp(2rem,3vw,4rem)}
+#homeBenefitSection .title{flex:0 0 clamp(38%, 36%, 40%);display:flex;flex-direction:column;justify-content:flex-start;min-height:clamp(400px,50vw,588px)}
+#homeBenefitSection .title h2{font-size:clamp(1.5rem,3vw,2.25rem);margin-bottom:1rem;line-height:clamp(2rem,4vw,3rem)}
+#homeBenefitSection .title p{font-size:clamp(.875rem,1.5vw,1rem);line-height:clamp(1.25rem,2vw,1.5rem);margin:0}
+#homeBenefitSection .benefits{flex:0 0 clamp(55%, 50%, 55%);display:flex;flex-direction:column;gap:clamp(2rem,4vw,4rem);max-width:600px}
+#homeBenefitSection .benefit-item{padding:clamp(1rem,2vw,1.25rem);border-radius:clamp(16px,2vw,24px);background-color:#fff;display:flex;flex-direction:column;gap:clamp(2rem,3vw,3rem);max-width:100%}
+#homeBenefitSection .bi-image{width:100%;height:clamp(180px,20vw,282px);border-radius:clamp(16px,2vw,24px);background-position:100% 30%;background-size:100% auto}
+#homeBenefitSection .bi-content h3{font-size:clamp(1.5rem,2.5vw,2.25rem);font-weight:600;font-family:'SF Pro Display',sans-serif;margin-bottom:clamp(1rem,2vw,1.75rem)}
+#homeBenefitSection .bi-content p{font-size:clamp(.75rem,1.5vw,.875rem);font-family:'SF Pro Display',sans-serif;font-weight:400;margin-bottom:clamp(.75rem,1.5vw,1.5rem);line-height:clamp(1.25rem,2vw,1.5rem)}
+
+/* MEDIA QUERIES */
+@media(max-width:991px){
+  #homeBenefitSection .title,
+  #homeBenefitSection .benefits{flex:0 0 100%}
+  #homeBenefitSection .title{min-height:auto;margin-bottom:2rem}
+}
+
+@media(max-width:575px){
+  #homeBenefitSection{padding:clamp(2rem,6vw,3rem) 0.5rem}
+  #homeBenefitSection .benefit-item{gap:clamp(1rem,3vw,2rem)}
+  #homeBenefitSection .bi-image{height:clamp(150px,25vw,200px)}
+  #homeBenefitSection .bi-content h3{font-size:clamp(1.25rem,4vw,1.75rem)}
+  #homeBenefitSection .bi-content p{font-size:clamp(.75rem,3vw,.875rem)}
+}
 
 
 
+/*Benefit Section Ends*/
 
-/*About Dental Practise Section End*/
+
+
+/************************************************SERVICE PAGE END***************************************/
+
+
 
 
 
@@ -614,3 +1583,6 @@ width: 10%;
 }
 
 /*Footer Section Start End*/
+
+
+
