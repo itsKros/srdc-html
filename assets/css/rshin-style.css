@@ -1290,7 +1290,7 @@ border-radius: 24px;
 #ServiceHeroSection .hero-img {
     position: absolute;
     top: 0;
-    right: 0;                /* sits on the right */
+    right: 0;                
     width: 60%;
     height: 100%;
     background-size: cover;
@@ -1304,7 +1304,7 @@ border-radius: 24px;
     #ServiceHeroSection .hero-img {
         width: 100%;
         height: 50%;
-        bottom: 0;              /* sits at the bottom */
+        bottom: 0;              
         top: auto;
         right: 0;
     }
@@ -1428,11 +1428,31 @@ background-color: #4C514D;
   }
 }
 
+@media (max-width: 1024px){
+  #ServiceUspSection .title-section h2 {
+    width: 100%;
+    font-size: 2.5rem;
+    line-height: 3rem;
+}
+
+#ServiceUspSection .uspImage.col-md-5
+ {
+    min-height: 455px;
+}
+
+#ServiceUspSection .uspContent.col-md-7 {
+    width: 50%;
+}
+#ServiceUspSection .imageSection.d-flex {
+    gap: 2rem;
+}
+}
+
 
 /*USP Section Ends*/
 
 
-/*SERVICE DETAILS SECTION STARTS*/
+/*********************************************************SERVICE DETAILS SECTION STARTS******************************************************/
 
 /*HERO SECTION START*/
 
@@ -1487,36 +1507,266 @@ width: 42.625rem;
     padding-bottom: 2rem;
 }
 
+
+@media(max-width: 767px){
+  #DetailsHeroSection .container.d-flex {
+    flex-direction: column;
+}
+
+#DetailsHeroSection .row.col-md-8 {
+    padding: 8.75rem 0 0 0;
+}
+
+#DetailsHeroSection .title-section h1 {
+    font-size: 2.5rem;
+    line-height: 4.25rem;
+    padding-bottom: 2rem;
+}
+
+#DetailsHeroSection .title-section p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+
+#DetailsHeroSection .details-image.col-md-4 {
+    margin-top: 0;
+}
+
+#DetailsHeroSection .contact-btn{
+  display: none;
+}
+}
+
 /*HERO SECTION END*/
 
 
 /*SECOND SECTION - EXPLANATION POINT START*/
 
 #DetailsExplanationSection .container{
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
     text-align: left;
-    padding: 7.5rem 9.75rem;
+    padding: 7.5rem 0 0 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#DetailsExplanationSection .detail-img img{
-  background-size: cover;         /* fills the container, cropping if needed */
-  background-position: center;    /* keeps main focus centered */
+#DetailsExplanationSection .title-section h1 {
+    font-size: 3rem;
+    line-height: 3.75rem;
+    letter-spacing: -0.06rem;
+    padding-bottom: 1.5rem;
+}
+
+#DetailsExplanationSection .title-section p {
+    font-size: 1.25rem;
+    line-height: 2rem;
+    letter-spacing: -0.025rem;
+    font-weight: 600;
+}
+
+#DetailsExplanationSection .content-section
+ {
+    font-size: 1.15rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.01rem;
+    width: 60.5rem;
+    padding-bottom: 5rem;
+}
+
+#DetailsExplanationSection .content-section.below
+ {
+    padding-top: 7.75rem;
+ }
+
+#DetailsExplanationSection .content-section.below p{
+    font-size: 1.15rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.01rem;
+    width: 60.5rem;
+    color: rgba(0, 0, 0,  0.7);
+}
+
+#DetailsExplanationSection .detail-image img{
+  background-size: cover;     
+  background-position: center;    
   background-repeat: no-repeat;
-  border-radius: 16px;
-  height: 100%;                   /* make it fill the height of its row */
+  height: 100%;                   
   min-height: 350px;
+  border-radius: 24px;
 }
 
 #DetailsExplanationSection .row.title-section {
     text-align: center;
-    width: 60.5rem;
+    width: 44.5rem;
+    justify-content: center;
+    padding-bottom: 5rem;
+}
+
+#DetailsExplanationSection  .detail-image {
+    flex-direction: column;
+    align-items: center;
+}
+
+#DetailsExplanationSection  .detail-image .image-caption{
+   padding-top: 1.5rem;
 }
 
 
+/*MEDIA QUERIES*/
+
+/*TABLET*/
+
+@media(max-width: 767px){
+  #DetailsExplanationSection .row.title-section {
+    width: 100%;
+    padding: 2.5rem 0 3rem 0;
+  }
+
+  #DetailsExplanationSection .title-section h1 {
+    font-size: 2rem;
+    line-height: 2.75rem;
+    padding-bottom: 1.5rem;
+}
+
+#DetailsExplanationSection .container {
+    padding: 1.75rem 1.25rem 0 1.25rem;
+}
+
+#DetailsExplanationSection .title-section p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+#DetailsExplanationSection .content-section {
+    width: 100%;    
+}
+
+#DetailsExplanationSection .content-section.below p {
+    font-size: 1.15rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.01rem;
+    width: 100%;
+}
+
+#DetailsExplanationSection .content-section.below
+{
+    padding: 3rem 0 0 0;
+}
+
+#DetailsExplanationSection .detail-image img {
+    height: 100%;
+    min-height: 250px;
+    width: 100%;
+}
+
+
+}
+
 /*SECOND SECTION - EXPLANATION POINT END*/
+
+
+/*THIRD SECTION - EXPLANATION POINT ACCORDIAN PART II STARTS*/
+#DetailsAccordianExplanation .title-section h1 {
+    font-size: 3rem;
+    line-height: 3.75rem;
+    letter-spacing: -0.06rem;
+    width: 15.56343rem;
+    padding-bottom: 3.75rem;
+}
+
+#DetailsAccordianExplanation .title-section h3 {
+  font-size: 1.25rem;
+    line-height: 2rem;
+    letter-spacing: -0.025rem;
+    font-family: 'SF Pro', sans-serif;
+    font-weight: 600;
+    padding: 2rem 0 5rem 0 ;
+
+}
+
+
+#DetailsAccordianExplanation .row.title-section.d-flex {
+    justify-content: space-between;
+}
+
+#DetailsAccordianExplanation .row.image-content-block.d-flex {
+    padding-top: 3.75rem;
+    /* gap: 5rem; */
+    justify-content: space-between;
+}
+
+#DetailsAccordianExplanation .row.image-content-block img {
+    width: 100%;
+    border-radius: 24px;
+    margin-bottom: 1.5rem;
+    min-height: 24.75rem;
+}
+
+#DetailsAccordianExplanation .content-block .image-box img {
+    width: 100%;
+    border-radius: 24px;
+    margin-bottom: 1.5rem;
+}
+
+#DetailsAccordianExplanation .image-block{
+  /* width: 33%; */
+  width: 40%;
+}
+
+#DetailsAccordianExplanation .content-block{
+  /* width: 60%; */
+  width: 51%;
+}
+
+
+.d-flex.align-items-center.flex-column {
+    /* height: 100%; */
+    background-repeat: no-repeat;
+    border-radius: 24px;
+    min-height: 28.75rem;
+    background-position: 22% 100%;
+}
+
+/*MEDIA QUERIES*/
+
+@media(max-width: 767px){
+#DetailsAccordianExplanation .content-block {
+    width: 100%;
+}
+
+    #homeFaqSection {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    #DetailsAccordianExplanation .image-block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+}
+
+/*THIRD SECTION - EXPLANATION POINT ACCORDIAN PART II ENDS*/
+
+/*FAQ SECTION STARTS*/
+#homeFaqSection .faq-title-detail {
+    font-size: 3rem;
+    line-height: 3.75rem;
+    font-weight: 400;
+    letter-spacing: -0.06rem;
+    padding: 10rem 0 3.75rem 0;
+}
+
+/* @media(max-width: 767px){
+#homeFaqSection .container {
+    padding: 0;
+}
+} */
+/*FAQ SECTION ENDS*/
+
+
 
 /*SERVICE DETAILS SECTION ENDS*/
 
