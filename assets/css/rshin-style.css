@@ -208,7 +208,7 @@ h1, h2, h3, blockquote {
 #DetailsheaderSection .nav-link{font-size:clamp(13px, .9vw, 14px);font-family:'SF Pro',sans-serif;color:var(--glo)!important;padding:0!important;transition:color .3s ease}
 #DetailsheaderSection .nav-link.active,#DetailsheaderSection .nav-link:hover{color:#fff!important}
 #DetailsheaderSection .navbar-nav{gap:clamp(16px,2.5vw,32px)}
-#DetailsheaderSection .top-call{color:var(--glo);font-size:clamp(14px, 1vw, 16px);font-weight:500;font-family:'SF Pro Display',sans-serif;padding:10px 24px;text-decoration:none;line-height:24px;letter-spacing:.32px;background-color:rgba(255,255,255,.12);border-radius:25px;transition:background-color .3s ease,color .3s ease}
+#DetailsheaderSection .top-call{color:var(--glo);font-size:clamp(14px, 1vw, 16px);font-weight:500;font-family:'SF Pro',sans-serif;padding:10px 24px;text-decoration:none;line-height:24px;letter-spacing:.32px;background-color:rgba(255,255,255,.12);border-radius:25px;transition:background-color .3s ease,color .3s ease}
 #DetailsheaderSection .top-call:hover{background-color:rgba(255,255,255,.25)}
 .navbar-toggler-icon {
     background-image: url(../imgs/menu.svg);
@@ -392,7 +392,7 @@ color: rgba(0, 0, 0,  0.7);
 #AboutDentalserviceSection .tour{border-radius:24px;padding:0;overflow:hidden;display:flex; justify-content: space-between;}
 #AboutDentalserviceSection .tour .content{padding: 0rem 0rem 2rem 4.5rem;}
 #AboutDentalserviceSection .tour h2{font-family:'SF Pro'; font-size: 2.25rem;line-height: 3rem;margin-bottom: 1.5rem;letter-spacing: -0.045rem;}
-#AboutDentalserviceSection .tour h3{font-family:"SF Pro Display",sans-serif;font-size:1.25rem;line-height:2rem;font-weight:600;margin-bottom:3rem}
+#AboutDentalserviceSection .tour h3{font-family:"SF Pro",sans-serif;font-size:1.25rem;line-height:2rem;font-weight:600;margin-bottom:3rem}
 #AboutDentalserviceSection .tour p{opacity:.75;font-size:1rem;line-height:1.5rem}
 #AboutDentalserviceSection .tour .timage{width:100%;height:100%;background-size:cover;background-position:center center;background-repeat:no-repeat;border-radius:24px}
 
@@ -967,8 +967,8 @@ width: 10%;
 #homeServiceSection .service-grid .service-item{padding:clamp(8px,1vw,12px);background-color:var(--mist);border-radius:12px;display:flex;flex-direction:column;gap:clamp(16px,2vw,24px)}
 #homeServiceSection .si-image{height:clamp(150px,15vw,215px);background-size:cover;background-position:center;background-repeat:no-repeat;border-radius:8px}
 #homeServiceSection .si-content{padding:clamp(8px,1vw,12px);gap:clamp(24px,3vw,37px);display:flex;flex-direction:column}
-#homeServiceSection .si-content h3{font-size:clamp(1.25rem,2vw,1.5rem);font-family:'SF Pro Display',sans-serif;font-weight:600;margin-bottom:0}
-#homeServiceSection .si-content p{font-size:clamp(.75rem,1.5vw,.875rem);font-family:'SF Pro Display',sans-serif;font-weight:400;margin-bottom:0;color:var(--ebony);opacity:.6}
+#homeServiceSection .si-content h3{font-size:clamp(1.25rem,2vw,1.5rem);font-family:'SF Pro',sans-serif;font-weight:600;margin-bottom:0}
+#homeServiceSection .si-content p{font-size:clamp(.75rem,1.5vw,.875rem);font-family:'SF Pro',sans-serif;font-weight:400;margin-bottom:0;color:var(--ebony);opacity:.6}
 #homeServiceSection .btn.contact-us{background-color:#4c514d;color:#fff}
 #homeServiceSection .title-section.look{padding-top:clamp(4rem,8vw,10rem);display:flex;flex-wrap:wrap;align-items:flex-start;gap:clamp(16px,2vw,24px)}
 #homeServiceSection .title-section.look .title{flex:0 0 40%}
@@ -1006,7 +1006,7 @@ width: 10%;
 #homeArticleSection>.container{display:flex;flex-direction:column;gap:3.75rem;padding:0 1rem}
 #homeArticleSection .title-section{align-items:center}
 #homeArticleSection .title h2{font-size:3rem;margin:0}
-#homeArticleSection .btn.btn-primary.view-all{padding:10px 24px;border-radius:70px;font-size:1rem;font-family:'SF Pro Display',sans-serif;font-weight:500;background:#4c514d;border-color:#4c514d;color:#fff}
+#homeArticleSection .btn.btn-primary.view-all{padding:10px 24px;border-radius:70px;font-size:1rem;font-family:'SF Pro',sans-serif;font-weight:500;background:#4c514d;border-color:#4c514d;color:#fff}
 #homeArticleSection .blog-loop{padding:28px;background-color:var(--mist);border-radius:24px;border:1px solid rgba(0,0,0,.04);display:grid;grid-template-columns:1fr 1fr;gap:20px}
 #homeArticleSection .blog-item{display:flex;gap:28px;padding:28px;border-radius:16px;background:transparent;align-items:flex-start;border-bottom:1px solid rgba(0,0,0,.02)}
 #homeArticleSection .blog-item:nth-child(odd){border-right:1px solid rgba(0,0,0,.02)}
@@ -1015,7 +1015,7 @@ width: 10%;
 #homeArticleSection .bi-meta{display:flex;justify-content:space-between;align-items:center;gap:12px}
 #homeArticleSection .bi-date{font-size:.95rem;color:rgba(0,0,0,.8)}
 #homeArticleSection .bi-category{font-size:.75rem;padding:6px 12px;border-radius:24px;background-color:rgba(0,0,0,.06);font-weight:500}
-#homeArticleSection .bi-title{font-size:1.125rem;font-weight:600;line-height:1.4;font-family:'SF Pro Display',sans-serif;margin:0}
+#homeArticleSection .bi-title{font-size:1.125rem;font-weight:600;line-height:1.4;font-family:'SF Pro',sans-serif;margin:0}
 
 /* responsive: keep two columns on large tablets, one column on small screens */
 @media(max-width:991px){
@@ -1047,7 +1047,7 @@ width: 10%;
 #homeFaqSection .accordion-item{border:1px solid #eee;border-radius:.75rem;margin-bottom:1rem;overflow:hidden;background:#f9f8f7;box-shadow:0 2px 6px rgba(0,0,0,.04)}
 #homeFaqSection .accordion-flush>.accordion-item{border-radius:1rem}
 #homeFaqSection .accordion-button:focus{box-shadow:none}
-#homeFaqSection .accordion-button{background-color:var(--mist);color:#000;font-size:1.25rem;font-weight:600;padding:1rem 1.25rem;box-shadow:none;line-height:2rem;font-family:'SF Pro Display',sans-serif;border:none;transition:background-color .3s ease}
+#homeFaqSection .accordion-button{background-color:var(--mist);color:#000;font-size:1.25rem;font-weight:600;padding:1rem 1.25rem;box-shadow:none;line-height:2rem;font-family:'SF Pro',sans-serif;border:none;transition:background-color .3s ease}
 #homeFaqSection .accordion-button:hover{background-color:#f1efed}
 #homeFaqSection .accordion-button:not(.collapsed){background-color:#6c635a;color:#fff}
 #homeFaqSection .accordion-button::after{display:none}
@@ -1122,7 +1122,7 @@ width: 10%;
   border-radius: 60px;
   font-size: 1rem;
   font-weight: 500;
-  font-family: "SF Pro Display", sans-serif;
+  font-family: "SF Pro", sans-serif;
   transition: all .25s ease;
 }
 
@@ -1844,8 +1844,8 @@ width: 42.625rem;
 #homeBenefitSection .benefits{flex:0 0 clamp(55%, 50%, 55%);display:flex;flex-direction:column;gap:clamp(2rem,4vw,4rem);max-width:600px}
 #homeBenefitSection .benefit-item{padding:clamp(1rem,2vw,1.25rem);border-radius:clamp(16px,2vw,24px);background-color:#fff;display:flex;flex-direction:column;gap:clamp(2rem,3vw,3rem);max-width:100%}
 #homeBenefitSection .bi-image{width:100%;height:clamp(180px,20vw,282px);border-radius:clamp(16px,2vw,24px);background-position:100% 30%;background-size:100% auto}
-#homeBenefitSection .bi-content h3{font-size:clamp(1.5rem,2.5vw,2.25rem);font-weight:600;font-family:'SF Pro Display',sans-serif;margin-bottom:clamp(1rem,2vw,1.75rem)}
-#homeBenefitSection .bi-content p{font-size:clamp(.75rem,1.5vw,.875rem);font-family:'SF Pro Display',sans-serif;font-weight:400;margin-bottom:clamp(.75rem,1.5vw,1.5rem);line-height:clamp(1.25rem,2vw,1.5rem)}
+#homeBenefitSection .bi-content h3{font-size:clamp(1.5rem,2.5vw,2.25rem);font-weight:600;font-family:'SF Pro',sans-serif;margin-bottom:clamp(1rem,2vw,1.75rem)}
+#homeBenefitSection .bi-content p{font-size:clamp(.75rem,1.5vw,.875rem);font-family:'SF Pro',sans-serif;font-weight:400;margin-bottom:clamp(.75rem,1.5vw,1.5rem);line-height:clamp(1.25rem,2vw,1.5rem)}
 
 /* MEDIA QUERIES */
 @media(max-width:991px){
@@ -2410,9 +2410,180 @@ gap: 0.75rem;
 
    
 }
-
-
 /************************************************PAYMENT OPTIONS ENDS***************************************/
+
+
+
+
+/************************************************CAREERS SECTION STARTS***************************************/
+
+
+/*HERO SECTION STARTS*/
+#CareersHeroSection{
+    margin: 12px;
+    border-radius:24px;
+    position: relative;
+}
+
+#CareersHeroSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        13deg,
+        rgba(76, 81, 77, 1) 30%,
+        rgba(76, 81, 77, 0) 75%
+    );
+    border-radius: 24px;
+    z-index: 0;
+}
+
+#CareersHeroSection .row.col-md-8 {
+    padding: 29.5rem 0 0;
+    z-index: 2;
+    position: relative;
+}
+
+#CareersHeroSection .title-section{
+z-index: 2;
+}
+
+#CareersHeroSection .title-section h1{
+    font-size: 3.5rem;
+    line-height: 4.25rem;
+    letter-spacing: -0.105rem;
+    color: var(--glo);
+    font-family:'SF Pro',sans-serif;
+    font-weight: 400;
+}
+
+
+#CareersHeroSection .title-section h2{
+    font-size: 3.5rem;
+    line-height: 4.25rem;
+    letter-spacing: -0.105rem;
+    color: var(--glo);
+}
+
+#CareersHeroSection .title-section p{
+    font-size: 1.25rem;
+    line-height: 2rem;
+    letter-spacing: -0.025rem;
+    padding-bottom: 4.25rem;
+    color: rgba(255, 255, 255,  0.7);
+    width: 50.063rem;
+}
+
+
+@media(max-width: 767px){
+  #CareersHeroSection .container.d-flex {
+    flex-direction: column;
+}
+
+#CareersHeroSection .row.col-md-8 {
+    padding: 8.75rem 0 0 0;
+}
+
+#CareersHeroSection .title-section h1 {
+    font-size: 2.5rem;
+    line-height: 4.25rem;
+    padding-bottom: 2rem;
+}
+
+#CareersHeroSection .title-section p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: rgba(255, 255, 255, 0.7);
+    width: 326px;
+}
+
+
+#CareersHeroSection .details-image.col-md-4 {
+    margin-top: 0;
+}
+
+#CareersHeroSection .contact-btn{
+  display: none;
+}
+}
+/*HERO SECTION END*/
+
+
+/*FORM SECTION STARTS*/
+#careersFormSection .careersFormContent h1 {
+    width: 23rem;
+    font-size: 3rem;
+    line-height: 3.75rem;
+    letter-spacing: -0.06rem;
+    padding-bottom: 3rem;
+}
+
+#careersFormSection .careersFormContent h3
+ {
+    font-family: 'SF Pro';
+    font-size: 1.25rem;
+    letter-spacing: -0.025rem;
+    padding-bottom: 2rem;
+}
+
+#careersFormSection .careersFormContent p {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.careerContainer{
+    padding-top: 5rem;
+}
+  .form-header{
+    margin-bottom: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .careersForm .col-md-8{
+    background-color: #f2f0ed;
+    border-radius: 1rem;
+    width: 39.25rem;
+  }
+
+      
+        .careersForm .form-label {
+            display: block; 
+            margin-bottom: 0.25rem;
+            font-weight: 500; 
+            color: #4b5563; 
+            font-size: 0.875rem; 
+        }
+
+       
+   .careersForm .form-control, .careersForm .form-select {
+            border-radius: 0.5rem; 
+        }
+
+       
+        #experienceDescription {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        
+       .careersForm .btn-submit {
+            background-color: #2563eb; 
+            border-color: #2563eb;
+            color: white;
+            border-radius: 0.5rem; 
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+            padding: 0.5rem 1.5rem;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        
+/*FORM SECTION ENDS*/
+
+
+/************************************************CAREERS SECTION ENDS***************************************/
+
 
 
 
@@ -2425,7 +2596,7 @@ gap: 0.75rem;
 #footerSection .footer-contact .fw-bold{font-size:.875rem;color:var(--glo)!important;font-weight:500}
 #footerSection .footer-links .widget-title{font-size:.875rem;color:var(--glo)!important;font-weight:400;opacity:70%}
 #footerSection .footer-links a{font-size:1rem;color:var(--glo)!important;font-weight:500;text-decoration:none}
-#footerSection .footer-button a{padding:10px 24px;font-size:1rem;border-radius:32px;font-weight:500;background-color:var(--glo);font-family:'SF Pro Display',sans-serif}
+#footerSection .footer-button a{padding:10px 24px;font-size:1rem;border-radius:32px;font-weight:500;background-color:var(--glo);font-family:'SF Pro',sans-serif}
 #footerSection .copyright .privacy a,.copyright p{font-size:.875rem;color:var(--glo)!important;text-decoration:none;opacity:70%;margin:0}
 #footerSection .copyright p{text-align:right}
 
