@@ -299,6 +299,7 @@ h1, h2, h3, blockquote {
 
 
 
+<<<<<<< HEAD
 :root {
     --indigo: #96A5C2;
     --vivid: #BFDCFE;
@@ -1371,12 +1372,15 @@ h1, h2, h3, blockquote {
 
 
 
+=======
+>>>>>>> 16b133ba8d0b373d6a78610e51ac5363f9dd1ea0
 #footerSection {background-color:#4c514d;color:#fff;padding:3.75rem 0 2.5rem}
 #footerSection .navbar-brand img{width:283px}
 #footerSection .footer-contact .text-secondary.small{font-size:.875rem;color:var(--glo)!important;opacity:70%;font-weight:400}
 #footerSection .footer-contact .fw-bold{font-size:.875rem;color:var(--glo)!important;font-weight:500}
 #footerSection .footer-links .widget-title{font-size:.875rem;color:var(--glo)!important;font-weight:400;opacity:70%}
 #footerSection .footer-links a{font-size:1rem;color:var(--glo)!important;font-weight:500;text-decoration:none}
+<<<<<<< HEAD
 #footerSection .footer-button a{padding:10px 24px;font-size:1rem;border-radius:32px;font-weight:500;background-color:var(--glo);font-family:'SF Pro',sans-serif}
 #footerSection .copyright .privacy a,.copyright p{font-size:.875rem;color:var(--glo)!important;text-decoration:none;opacity:70%;margin:0}
 #footerSection .copyright p{text-align:right}
@@ -1409,3 +1413,8 @@ h1, h2, h3, blockquote {
 
 }
 
+=======
+#footerSection .footer-button a{padding:10px 24px;font-size:1rem;border-radius:32px;font-weight:500;background-color:var(--glo);font-family:'SF Pro Display',sans-serif}
+#footerSection .copyright .privacy a,.copyright p{font-size:.875rem;color:var(--glo)!important;text-decoration:none;opacity:70%;margin:0}
+#footerSection .copyright p{text-align:right}
+>>>>>>> 16b133ba8d0b373d6a78610e51ac5363f9dd1ea0
