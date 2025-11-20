@@ -28,6 +28,7 @@
 @font-face {
   font-family: 'SF Pro';
   src: url('../fonts/sf-pro/SFProDisplay-Regular.woff2') format('woff2'),
+       url('../fonts/sf-pro/SF-Pro.ttf') format('truetype'),
        url('../fonts/sf-pro/SFProDisplay-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
@@ -2119,7 +2120,7 @@ width: 42.625rem;
     font-weight: 600;
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
 
     #paymentOptionsHeroSection .hero-img {
         width: 100%;
@@ -2131,16 +2132,19 @@ width: 42.625rem;
 
     #paymentOptionsHeroSection::before {
         width: 100%;
-        height: 70%;
+        height: 65%;
         background: linear-gradient(
             to bottom,
             #f2f0ed 80%,
             transparent 100%
         );
+        z-index: 1;
+        margin-top: 17px;
     }
 
     #paymentOptionsHeroSection .left {
         padding: 4rem 1.5rem 7rem;
+        width: 100%;
     }
 
     #paymentOptionsHeroSection {
@@ -2151,8 +2155,7 @@ width: 42.625rem;
     font-size: 2.5rem !important;
     line-height: 3rem !important;
 }
-
-}
+} */
 #paymentOptionsHeroSection h1{font-size:clamp(2rem,4vw,3.75rem);line-height:clamp(2.5rem,5vw,72px);color:var(--glo);margin:0}
 
 
@@ -2234,7 +2237,8 @@ letter-spacing: -0.105rem; color: var(--ebony); padding-bottom: 2rem;}
 
 #paymentThirdSection .paymentIconContainer .firstIcon {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    gap: 2.25rem;
     align-items: center;
 }
 
@@ -2273,6 +2277,8 @@ letter-spacing: -0.105rem; color: var(--ebony); padding-bottom: 2rem;}
 
 /*BANNER STARTS*/
 
+
+
 #paymentOptionsHeroSection .title-section .text-content .SF-16-black {
     width: 100% !important;
 }
@@ -2283,6 +2289,7 @@ letter-spacing: -0.105rem; color: var(--ebony); padding-bottom: 2rem;}
         bottom: 0;
         top: 0;
         right: 0;
+        background-position: 30% 100%;
     }
 
 #paymentOptionsHeroSection::before {
@@ -2302,14 +2309,14 @@ letter-spacing: -0.105rem; color: var(--ebony); padding-bottom: 2rem;}
     }
 
         #paymentOptionsHeroSection::before {
-        width: 100%;
-        height: 65%;
+        width: 101%;
+        height: 69%;
         background: linear-gradient(to top, #f2f0ed 80%, transparent 100%);
     }
 
 
         #paymentOptionsHeroSection .left {
-        padding: 5rem 1.5rem 0rem;
+        padding: 5rem 1.5rem 1rem;
     }
 
         #paymentOptionsHeroSection {
@@ -2356,7 +2363,11 @@ gap: 0.75rem;
 
 #paymentSecondSection .paymentContentSecond {
     justify-content: space-between;
-    padding: 3.75rem 0 0 0;
+    padding:0 0.875rem;
+}
+
+#paymentThirdSection {
+    padding: 3.75rem 1rem 5rem 1rem;
 }
 
 /*SECOND SECTION ENDS*/
@@ -2383,10 +2394,59 @@ gap: 0.75rem;
 }
 
 
-@media(max-width: 1024px){
+@media(min-width: 768px) and (max-width: 1024px){
+
+/**/
+
+#paymentSecondSection .paymentContentSecond {
+    padding: 3.75rem 0 4rem 0;
+}
+    #paymentOptionsHeroSection .hero-img {
+        width: 100%;
+        height: 50%;
+        bottom: 0;              
+        top: auto;
+        right: 0;
+    }
+
+    #paymentOptionsHeroSection::before {
+        width: 100%;
+        height: 65%;
+        background: linear-gradient(
+            to bottom,
+            #f2f0ed 80%,
+            transparent 100%
+        );
+        z-index: 1;
+        margin-top: 17px;
+    }
+
+    #paymentOptionsHeroSection .left {
+        padding: 4rem 1.5rem 7rem;
+        width: 100%;
+    }
+
+    #paymentOptionsHeroSection {
+    padding-bottom: 14rem;
+}
+
+#paymentOptionsHeroSection .left h1 {
+    font-size: 2.5rem !important;
+    line-height: 3rem !important;
+}  
+/**/
+ #paymentOptionsHeroSection .left {
+        padding: 8rem 1.5rem 14rem;
+    }
+
+  #paymentOptionsHeroSection .hero-img {
+    border-top-right-radius: 24px;
+    border-bottom-right-radius: 24px;
+    border-bottom-left-radius: 24px;
+}
 
   #paymentOptionsHeroSection .title-section .text-content .SF-16-black {
-    width: 20.563rem;
+    width: 38.563rem;
 }
   .paymentContentLeft h3 {
     font-size: 2rem;
@@ -2420,9 +2480,14 @@ gap: 0.75rem;
 
 /*HERO SECTION STARTS*/
 #CareersHeroSection{
+    background-image: url('../imgs/Career/Career-Banner.webp');
     margin: 12px;
-    border-radius:24px;
+    border-radius: 24px;
     position: relative;
+    object-fit: cover;
+    background-position: center;
+    min-height: 500px;
+    height: 100%;
 }
 
 #CareersHeroSection::before {
@@ -2479,25 +2544,49 @@ z-index: 2;
 
 
 @media(max-width: 767px){
-  #CareersHeroSection .container.d-flex {
+
+  #CareersHeroSection{
+    background-image: url('../imgs/Career/Career_Mobile_Banner.webp') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+  }
+
+  #CareersHeroSection::before {
+    background: linear-gradient(2deg, rgba(76, 81, 77, 1) 30%, rgba(76, 81, 77, 0) 66%);
+
+}
+
+#CareersHeroSection .container.d-flex {
     flex-direction: column;
 }
 
 #CareersHeroSection .row.col-md-8 {
-    padding: 8.75rem 0 0 0;
+    padding: 31.75rem 0 0 0;
 }
 
+
 #CareersHeroSection .title-section h1 {
-    font-size: 2.5rem;
-    line-height: 4.25rem;
-    padding-bottom: 2rem;
+        font-size: 1.5rem;
+        line-height: 2.25rem;
+        letter-spacing: -0.03rem;
+}
+
+#CareersHeroSection .title-section h2 {
+    font-size: 2.25rem;
+    line-height: 3rem;
+    letter-spacing: -0.068rem;
+    width: 15rem;
+    padding-bottom: 1rem;
 }
 
 #CareersHeroSection .title-section p {
     font-size: 1rem;
     line-height: 1.5rem;
     color: rgba(255, 255, 255, 0.7);
-    width: 326px;
+    width: 20.375rem;
+    padding-bottom: 2rem;
 }
 
 
@@ -2508,11 +2597,47 @@ z-index: 2;
 #CareersHeroSection .contact-btn{
   display: none;
 }
+
+/*FORM MEDIA*/
+
+.careersFormTab .col-md-8 {
+    width: 94% !important;
+}
+
+.careerContainer {
+    justify-content: center !important;
+    padding: 3rem 0 !important;
+}
+
+/*FORM CONTENT MEDIA*/
+#careersFormSection .careersFormContent h1 {
+    width: 17.25rem !important;
+    font-size: 2.25rem !important;
+    line-height: 3rem !important;
+    letter-spacing: -0.045rem !important;
+    padding-bottom: 3rem !important;
+}
+
+#careersFormSection .careersFormContent h3 {
+    font-size: 1.125rem !important;
+    letter-spacing: -0.022rem !important;
+    padding-bottom: 2rem !important;
+    line-height: 1.875rem !important;
+}
 }
 /*HERO SECTION END*/
 
 
 /*FORM SECTION STARTS*/
+
+.form-header h1, .section-header h1 {
+    font-family: 'SF Pro';
+    font-size: 1.25rem;
+    line-height: 2rem;
+    letter-spacing: -0.025rem;
+    color: var(--ebony);
+}
+
 #careersFormSection .careersFormContent h1 {
     width: 23rem;
     font-size: 3rem;
@@ -2534,31 +2659,328 @@ z-index: 2;
 }
 
 .careerContainer{
-    padding-top: 5rem;
+    padding: 5rem 0;
+    justify-content: space-between;
 }
   .form-header{
     margin-bottom: 1.5rem;
-    padding-top: 1.5rem;
   }
 
-  .careersForm .col-md-8{
+  .careersFormTab .col-md-8{
     background-color: #f2f0ed;
     border-radius: 1rem;
     width: 39.25rem;
+    padding: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
   }
 
       
-        .careersForm .form-label {
-            display: block; 
-            margin-bottom: 0.25rem;
-            font-weight: 500; 
-            color: #4b5563; 
-            font-size: 0.875rem; 
-        }
+.careersFormTab .form-label {
+      display: block; 
+      margin-bottom: 0.75rem;
+      font-weight: 500; 
+      color: rgba(0, 0, 0,  0.7); 
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      letter-spacing: -0.009rem; 
+}
+
+  .careersFormTab .section-header p {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    letter-spacing: -0.009rem;
+}
+
+#experienceDescription {
+    border-radius: 8px;
+}
 
        
-   .careersForm .form-control, .careersForm .form-select {
-            border-radius: 0.5rem; 
+.careersFormTab .form-control, .careersFormTab .form-select {
+            border-radius: 3.125rem; 
+            padding: 0.75rem 1.25rem;
+}
+
+       
+#experienceDescription {
+            min-height: 150px;
+            resize: vertical;
+}
+
+        
+.careersFormTab .btn-submit {
+    background-color: #4C514D;
+    color: var(--glo);
+    border-radius: 4.375rem;
+    padding: 0.625rem 1.5rem;
+    font-family: 'SF Pro';
+    font-weight: 500;
+}
+
+
+/******************TABLET RESPONSIVE************/
+
+@media(min-width: 768px) and (max-width: 1024px){
+
+
+.careersFormTab .col-md-8 {
+    width: 27.25rem;
+}
+
+#careersFormSection .careersFormContent h1 {
+    width: 100%;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    letter-spacing: -0.06rem;
+    padding-bottom: 2rem;
+}
+
+}
+
+
+        
+/*FORM SECTION ENDS*/
+
+
+/************************************************CAREERS SECTION ENDS***************************************/
+
+/************************************************BOOKING SECTION STARTS***************************************/
+
+/*HERO SECTION START*/
+
+#bookingBannerSection{
+  background-color: #99A4BF;
+  margin: 12px;
+  border-radius: 16px;
+}
+
+#bookingBannerSection .row {
+    padding: 15.5rem 0 4.25rem 0;
+}
+
+#bookingBannerSection .title-section{
+width: 42.625rem;
+}
+
+
+#bookingBannerSection .title-section h1{
+    font-size: 3.5rem;
+    line-height: 4.25rem;
+    letter-spacing: -0.105rem;
+    color: var(--ebony);
+    padding-bottom: 2rem;
+}
+
+#bookingBannerSection .title-section p{
+    font-size: 1.25rem;
+    line-height: 2rem;
+    letter-spacing: -0.025rem;
+    color: rgba(0, 0, 0,  0.7);
+    padding-bottom: 2rem;
+}
+
+
+@media(max-width: 767px){
+
+  #bookingBannerSection .title-section {
+    width: 100%;
+}
+
+#bookingBannerSection .row{
+    padding: 8.75rem 0 2rem 0;
+}
+
+#bookingBannerSection .title-section h1 {
+    font-size: 2.5rem;
+    line-height: 4.25rem;
+    padding-bottom: 2rem;
+}
+
+#bookingBannerSection .title-section p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    width: 18.75rem;
+}
+
+}
+
+/*BOOKING CONTENT SECTION*/
+#bookingContentSection .bookingBox {
+    background-color: #F2F0ED;
+    height: 50.563rem;
+    margin: 3.125rem auto;
+}
+
+/************************************************BOOKING SECTION ENDS***************************************/
+
+/************************************************CONTACT US SECTION STARTS***************************************/
+
+/*CONTACT US HERO SECTION START*/
+
+#contactHeroSection{
+  position: relative;
+  background-image: url('../imgs/Contact-Us/Contact_Us_banner.webp');
+  margin: 12px;
+  background-size: cover;         
+  background-position: center left;  
+  background-repeat: no-repeat;
+  border-radius: 1.5rem;
+  height: 100%; 
+  min-height: 37.5rem;                 
+}
+
+#contactHeroSection::before {
+  content: ''; 
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black; 
+  opacity: 0.5; 
+  z-index: 0;
+  border-radius: 1.5rem;
+}
+
+#contactHeroSection .row {
+    padding: 13.5rem 0 2.25rem 0;
+    z-index: 1;
+}
+
+#contactHeroSection .title-section{
+width: 42.625rem;
+}
+
+
+#contactHeroSection .title-section h1{
+    font-size: 3.5rem;
+    line-height: 4.25rem;
+    letter-spacing: -0.105rem;
+    color: var(--glo);
+    padding-bottom: 2rem;
+}
+
+#contactHeroSection .title-section p{
+    font-size: 1.25rem;
+    line-height: 2rem;
+    letter-spacing: -0.025rem;
+    color: rgba(255, 255, 255,  0.7);
+    padding-bottom: 2rem;
+    width: 34.813rem;
+}
+
+#contactHeroSection .title-section .btn {
+    padding: 10px 24px;
+    border-radius: 70px;
+    font-weight: 500;
+}
+/*CONTACT US HERO SECTION ENDS*/
+
+/*CONTACT US MAP&FORM SECTION STARTS*/
+/*FORM SECTION STARTS*/
+
+/*FORM SECTION STARTS*/
+
+#contactFormSection .contact-timing-container{
+    margin: 0.625rem 0;
+}
+
+#contactFormSection .contact-map-image{
+  margin-top: 3.75rem;
+  border-radius: 1rem;
+  width: 100%;
+}
+
+.form-header h1, .section-header h1 {
+    font-family: 'SF Pro';
+    font-size: 1.25rem;
+    line-height: 2rem;
+    letter-spacing: -0.025rem;
+    color: var(--ebony);
+}
+
+#contactFormSection .contactFormContent h1 {
+    width: 23rem;
+    font-size: 3rem;
+    line-height: 3.75rem;
+    letter-spacing: -0.06rem;
+    padding-bottom: 3rem;
+}
+
+#contactFormSection .contactFormContent h3
+ {
+    font-family: 'SF Pro';
+    font-size: 1.25rem;
+    letter-spacing: -0.025rem;
+}
+
+#contactFormSection .contactFormContent p {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.contactContainer{
+    padding: 5rem 0;
+    justify-content: space-between;
+}
+  .form-header{
+    margin-bottom: 1.5rem;
+  }
+
+  .contactFormTab .col-md-8{
+    /* background-color: #f2f0ed;
+    border-radius: 1rem;
+    width: 39.25rem;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    border: 1px solid #E0E0E0;
+    margin-top: -28.438rem;
+    z-index: 3;
+    box-shadow: 0px 0px 0px 10px #FFFFFF; */
+
+    background-color: #f2f0ed;
+    border-radius: 1rem;
+    width: 39.25rem;
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    border: 1px solid #E0E0E0;
+    z-index: 3;
+    box-shadow: 0px 0px 0px 10px #FFFFFF;
+    position: absolute;
+    right: 42px;
+    top: 248px;
+  }
+
+      
+  .contactFormTab .form-label {
+      display: block; 
+      margin-bottom: 0.75rem;
+      font-weight: 500; 
+      color: rgba(0, 0, 0,  0.7); 
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+      letter-spacing: -0.009rem; 
+  }
+
+  .contactFormTab .section-header p {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    letter-spacing: -0.009rem;
+}
+
+#experienceDescription {
+    border-radius: 8px;
+}
+
+       
+   .contactFormTab .form-control, .contactFormTab .form-select {
+            border-radius: 3.125rem; 
+            padding: 0.75rem 1.25rem;
         }
 
        
@@ -2568,24 +2990,891 @@ z-index: 2;
         }
 
         
-       .careersForm .btn-submit {
-            background-color: #2563eb; 
-            border-color: #2563eb;
-            color: white;
-            border-radius: 0.5rem; 
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
-            padding: 0.5rem 1.5rem;
-            transition: background-color 0.2s ease-in-out;
-        }
+    .contactFormTab .btn-submit {
+    background-color: #4C514D;
+    color: var(--glo);
+    border-radius: 4.375rem;
+    padding: 0.625rem 1.5rem;
+    font-family: 'SF Pro';
+    font-weight: 500;
+}
 
-        
-/*FORM SECTION ENDS*/
-
-
-/************************************************CAREERS SECTION ENDS***************************************/
+.contact-text-area #experienceDescription {
+    min-height: 21.73rem;;
+    resize: vertical;
+}
 
 
+/******************TABLET RESPONSIVE************/
 
+@media(min-width: 768px) and (max-width: 1024px){
+
+  .contact-text-area #experienceDescription {
+    min-height: 8.938rem;
+}
+
+  #contactFormSection .contactFormContent h3 {
+    font-size: 1rem;
+}
+
+.contactFormTab .col-md-8 {
+        width: 23.25rem;
+        margin-top: -29.438rem;
+        top: 0;
+        position: relative;
+        right: 2px;
+}
+
+#contactFormSection .contactFormContent h1 {
+    width: 100%;
+    font-size: 2rem;
+    line-height: 2.3rem;
+    letter-spacing: -0.06rem;
+    padding-bottom: 2rem;
+}
+
+#contactHeroSection .title-section p {
+    width: 100%;
+}
+
+#contactHeroSection .title-section {
+    width: 72%;
+}
+
+}
+
+
+@media(max-width: 767px){
+  /*FORM MEDIA*/
+
+
+
+  .contact-text-area #experienceDescription {
+    min-height: 15.438rem;
+}
+
+  #contactHeroSection .title-section h1 {
+    font-size: 2.25rem;
+    line-height: 3rem;
+    letter-spacing: -0.068rem;
+}
+
+.contactFormTab .col-md-8 {
+        width: 81% !important;
+        order: 0;
+        margin-top: -12.188rem;
+        padding: 1rem 1rem 0 1rem;
+        position: relative;
+        right: 0;
+        top: 0;
+}
+
+#contactHeroSection{
+  background-image: url('../imgs/Contact-Us/Contact_Mobile_Banner.webp');
+  background-position: 48% 100%;
+    min-height: 48.5rem;
+}
+
+#contactHeroSection .title-section
+ {
+    width: 100%;
+}
+
+#contactHeroSection .title-section p {
+
+    width: 100%;
+}
+
+
+.contactContainer {
+    justify-content: center !important;
+    padding: 3rem 0 !important;
+    
+}
+
+/*FORM CONTENT MEDIA*/
+#contactFormSection .contactFormContent h1 {
+    width: 17.25rem !important;
+    font-size: 2.25rem !important;
+    line-height: 3rem !important;
+    letter-spacing: -0.045rem !important;
+    padding-bottom: 3rem !important;
+}
+
+#contactFormSection .contactFormContent h3 {
+    font-size: 1.125rem !important;
+    letter-spacing: -0.022rem !important;
+    padding-bottom: 2rem !important;
+    line-height: 1.875rem !important;
+}
+
+.contactFormContent.col-md-5 {
+    order: 1;
+    margin-top: 4.688rem;
+    width: 87%;
+}
+}
+/*CONTACT US MAP&FORM SECTION ENDS*/
+
+
+
+
+/*************PATIENT SECTION STARTS******************/
+
+/*BANNER SECTION STARTS*/
+#patientHeroSection {
+    position: relative;
+    background-repeat: no-repeat;
+    margin: 12px;
+    padding-bottom: 2rem;
+    border-radius: 24px;
+}
+
+#patientHeroSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 63%;
+    height: 100%;
+    background: linear-gradient(to right, #f2f0ed 80%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 24px;
+    z-index: 1;
+}
+
+#patientHeroSection .title-section {
+    position: relative;
+    z-index: 2;
+}
+
+#patientHeroSection .title-section h3 {
+    font-family: 'SF Pro';
+    color: var(--ebony);
+    font-size: 3rem;
+    line-height: 3.75rem;
+    letter-spacing: 0.06rem;
+    font-weight: 400;
+}
+
+#patientHeroSection .left {
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+    padding: 23.313rem 0 0 0;
+}
+
+#patientHeroSection .hero-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 0;
+    border-radius: 24px;
+    background-position: 100% 15%;
+}
+
+#patientHeroSection .left h1 {
+    font-size: 3.5rem;
+    line-height: 4.25rem;
+    letter-spacing: -0.105rem;
+    color: var(--ebony);
+    padding-bottom: 2rem;
+}
+
+#patientHeroSection .text-content p {
+    width: 44.063rem;
+}
+
+/*BANNER SECTION ENDS*/
+
+
+/*PATIENT - WHAT TO EXPECT SECTION STARTS*/
+
+#patientSecondSection .patientContentSecond {
+    justify-content: space-between;
+    padding: 3.75rem 0 10rem 0;
+}
+
+.patientContentLeft h3 {
+    font-size: 2.25rem;
+    font-weight: 600;
+    line-height: 3rem;
+    font-family: 'SF Pro', sans-serif;
+    letter-spacing: -0.045rem;
+}
+
+.patient-button-container.d-flex {
+    gap: 0.75rem;
+}
+
+.patient-button-container .contact-btn,
+#patientHeroSection .text-content .contact-btn {
+    background-color: #4C514D;
+    color: var(--bs-body-bg);
+    border-radius: 70px;
+    padding: 10px 24px;
+    margin-top: 32px;
+    font-weight: 600;
+}
+
+/*PATIENT - WHAT TO EXPECT SECTION ENDS*/
+
+/*PATIENT - PINK BOX SECTION STARTS*/
+
+#patientThirdBoxSection.patientThird{
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+#patientThirdBoxSection .image-caption {
+    text-align: center;
+    padding-top: 1.5rem;
+}
+
+#patientThirdBoxSection .detail-image{
+  background-color: #F2F0ED;
+  width: 52.875rem;
+  height: 100%;
+  min-height: 28.75rem;
+  border-radius: 1.5rem;
+}
+/*PATIENT - PINK BOX SECTION ENDS*/
+
+/*THIRD SECTION STARTS*/
+#patientThirdSection{
+padding-top: 8.875rem;
+}
+
+#patientThirdSection .patientLeftContainer h1{
+    font-size: 3rem;
+    line-height: 3.75rem;
+    letter-spacing: -0.06rem;
+    padding-bottom: 2.5rem;
+}
+
+#patientThirdSection .patientLeftContainer h3 {
+    font-family: 'SF Pro';
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    letter-spacing: -0.025rem;
+    width: 34.25rem;
+}
+
+#patientThirdSection .patientRightContent {
+    padding-bottom: 4.313rem;
+}
+
+#patientThirdSection .patientRightContainer{
+    padding-top: 6.75rem;
+}
+
+#patientThirdSection .patientRightContent p{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.015rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#patientThirdSection .patientPinkBoxRight {
+    background-color: #F2F0ED;
+    border-radius: 24px;
+    height: 28.75rem;
+}
+
+/*THIRD SECTION ENDS*/
+
+
+/******************************MEDIA QUERY*******************************/
+
+/*PHONE RESPONSIVE*/
+
+@media (max-width: 767px) {
+
+  /*BANNER SECTION START*/
+#patientHeroSection .hero-img {
+   
+        width: 100%;
+        height: 100%;
+        bottom: auto;
+        top: auto;
+        right: auto;
+        position: absolute;
+        order: 0;
+        background-position: 70% 100%;
+   
+}
+
+#patientHeroSection::before {
+        width: 100%;
+        height: 50%;
+        background: linear-gradient(to top, #f2f0ed 80%, transparent 100%);
+        top: 50%;
+       
+    }
+
+#patientHeroSection .left {
+      padding: 35rem 1rem 0rem;
+    }
+
+#patientHeroSection {
+        height: auto;
+        display: flex;
+        flex-direction: column;   
+}
+
+#patientHeroSection .title-section h3 {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    letter-spacing: -0.03rem;
+}
+
+#patientHeroSection > .container {
+    display: flex;
+    order: 1;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#patientHeroSection .title-section {
+    position: relative;
+    z-index: 2;
+    order: 1;
+}
+
+#patientHeroSection .left h1 {
+   font-size: 2rem !important;
+   line-height: 2.75rem !important;
+   width: 10.938rem;
+}
+
+#patientHeroSection .text-content p {
+    width: 100%;
+}
+
+/*BANNER SECTION END*/
+
+/*WHAT YOU THINK SECTION STARTS*/
+
+#patientSecondSection .patientContentSecond {
+        justify-content: space-between;
+        padding: 3.75rem 1rem 0 1rem;
+}
+
+#patientSecondSection .patientContentLeft {
+        width: 100% !important;
+}
+
+.patientContentLeft h3 {
+        font-size: 1.5rem !important;
+        font-weight: 600;
+        line-height: 2.25rem;
+        letter-spacing: -0.03rem;
+        padding-bottom: 3rem;
+}
+
+#patientSecondSection .mobilepatientContentRight h2 {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        letter-spacing: -0.02rem;
+        font-weight: 600;
+        color: var(--ebony);
+        padding-bottom: 2rem;
+}
+
+#patientSecondSection .mobile-patient-button-container {
+        gap: 0.75rem;
+}
+
+#patientSecondSection .mobile-patient-button-container .contact-btn {
+        background-color: #4C514D;
+        color: var(--bs-body-bg);
+        border-radius: 70px;
+        padding: 10px 24px;
+        margin-top: 32px;
+        font-weight: 600;
+}
+/*WHAT YOU THINK SECTION ENDS*/
+
+/*THIRD SECTION STARTS*/
+#patientThirdBoxSection.patientThird{
+  margin: 3rem 0;
+}
+
+#patientThirdBoxSection .detail-image
+{
+  width: 92%;
+  min-height: 18.188rem;
+}
+/*THIRD SECTION ENDS*/
+
+}
+
+/*MEDIA QUERY FOR TABLET*/
+
+/*BANNER SECTION STARTS*/
+@media(min-width: 768px) and (max-width: 1024px)
+{
+
+#patientHeroSection .title-section h3 {
+    font-size: 3rem;
+}
+
+#patientHeroSection .left h1 {
+    font-size: 2.8rem;
+}
+
+#patientHeroSection .text-content p {
+    width: 23.063rem;
+}
+
+#patientHeroSection::before {
+    width: 70%;
+}
+
+#patientHeroSection .hero-img 
+{
+    background-position: 70% 100%;
+}
+
+#patientSecondSection .patientContentLeft{
+        width: 47.333333%;
+}
+
+#patientThirdBoxSection .detail-image {
+    width: 90%;
+}
+
+#patientThirdSection .patientLeftContainer h3 {
+    width: 83%;
+}
+
+#patientThirdSection .patientPinkBoxRight {
+    height: 13.75rem;
+}
+
+}
+/*BANNER SECTION ENDS*/
+/*************PATIENT SECTION ENDS******************/
+
+
+
+
+/*************ARTICLE SECTION STARTS******************/
+/*BANNER SECTION STARTS*/
+#articleBannerSection {
+    position: relative;
+    background-repeat: no-repeat;
+    margin: 12px;
+    border-radius: 24px;
+    background-color: #4C514D;
+}
+
+#articleBannerSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border-radius: 24px;
+    z-index: 1;
+}
+
+#articleBannerSection .title-section {
+    position: relative;
+    z-index: 2;
+    min-height: 43.813rem;
+}
+
+
+#articleBannerSection .left {
+    border-top-left-radius: 24px;
+    border-bottom-left-radius: 24px;
+    padding: 23.313rem 0 0 0;
+}
+
+#articleBannerSection .hero-img {
+    position: absolute;
+    top: 17px;
+    right: 0;
+    width: 49%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+
+}
+
+#articleBannerSection .left h1 {
+    font-size: 3.5rem;
+    line-height: 4.25rem;
+    letter-spacing: -0.105rem;
+    color: var(--glo);
+    padding-bottom: 2rem;
+}
+
+#articleBannerSection .text-content p {
+    width: 39.063rem;
+}
+
+#articleHeroSection .articles{
+  justify-content: space-between ;
+}
+
+/*TOGGLE*/
+
+.allArticles {
+    /* Apply any necessary font/color context */
+    font-family: 'SF Pro', sans-serif;
+}
+
+#articleHeroSection .allArticles h3 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+    font-family: 'SF Pro';
+}
+
+#articleHeroSection .filter-toggle {
+display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 400;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    font-size: 1rem;
+    position: relative;
+    letter-spacing: -0.01rem;
+}
+
+.filter-toggle:hover {
+    color: var(--primary-color);
+}
+
+.filter-toggle::after {
+    /* Creates the collapse icon (e.g., a chevron) */
+    content: "\2303"; /* Upwards chevron (or a Bootstrap icon if you use them) */
+    font-size: 0.8rem;
+    transition: transform 0.2s;
+    margin-left: 0;
+    margin-right: 0.5rem;
+    color: #36454F;
+    order: -1;
+
+}
+
+/* Rotate the icon when the toggle is active/expanded */
+.filter-toggle[aria-expanded="true"]::after {
+    transform: rotate(180deg);
+}
+
+.articleList p {
+    /* Style for sub-list items (Invisalign, Smile Makeover, etc.) */
+    padding: 0.3rem 0 0 1.5rem; /* Indent the text */
+    font-size: 0.95rem;
+    color: rgba(0,0,0, 0.7);
+}
+
+.filter-toggle-active{
+  color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.875rem;
+    font-family: 'SF Pro';
+    line-height: 1.25rem;
+    letter-spacing: -0.009rem;
+}
+
+/* Style for the active/bold category (e.g., Orthodontic) */
+.filter-toggle.active {
+    font-weight: 800;
+    color: black;
+}
+
+
+
+
+/******************************MEDIA QUERY*******************************/
+
+/*PHONE RESPONSIVE*/
+
+@media (max-width: 767px) {
+
+  /*BANNER SECTION START*/
+#articleBannerSection .hero-img {
+
+    background-image: url('../imgs/Article/mobile-article-banner.svg') !important;
+        width: 70%;
+        height: 100%;
+        bottom: auto;
+        top: auto;
+        right: 0;
+        position: absolute;
+        order: 0;
+        background-position: 100% 2%;
+}
+
+/* #patientHeroSection::before {
+        width: 100%;
+        height: 50%;
+        background: linear-gradient(to top, #f2f0ed 80%, transparent 100%);
+        top: 50%;
+       
+    } */
+
+#articleBannerSection .left {
+      padding: 29rem 1.5rem 2.938rem 1.5rem;
+    }
+
+#articleBannerSection {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;   
+}
+
+#articleBannerSection .title-section h3 {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+    letter-spacing: -0.03rem;
+}
+
+#articleBannerSection > .container {
+    display: flex;
+    order: 1;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#articleBannerSection .title-section {
+    position: relative;
+    z-index: 2;
+    order: 1;
+}
+
+#articleBannerSection .left h1 {
+    font-size: 2.5rem !important;
+    line-height: 3.25rem !important;
+    width: 100%;
+    letter-spacing: -0.075rem;
+}
+
+#articleBannerSection .text-content p {
+    width: 100%;
+}
+}
+/*BANNER SECTION END*/
+
+
+
+
+/*ARTICLE SECTION STARTS*/
+#articleHeroSection{padding:6.25rem 0}
+#articleHeroSection>.container{display:flex;flex-direction:column;gap:3.75rem;padding:0 1rem}
+/* #articleHeroSection .title-section{align-items:center} */
+#articleHeroSection .title h2{font-size:3rem;margin:0}
+
+
+#articleHeroSection .article-display-area {
+    background-color: var(--mist);
+    border-radius: 24px;
+    column-gap: 20px;
+    row-gap: 20px;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, .04);
+}
+
+
+#articleHeroSection .header-content p {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    letter-spacing: -0.009rem;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+
+#articleHeroSection .header-content h3 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.02rem;
+    color: var(--bs-black);
+    font-weight: 600;
+    padding-top: 5px;
+    margin: 0;
+    font-family: 'SF Pro';
+}
+
+ #articleHeroSection .article-header{
+    padding: 1.75rem 1.75rem 0;
+}
+
+
+#articleHeroSection .articleSearchBox{
+  width: 21.125rem;
+  border-radius: 60px;
+  border: 2px solid #E0E0E0;
+  padding: 0.75rem 1.5rem;
+  background-color: #e9e7e4;
+}
+
+
+
+#articleHeroSection .blog-loop{
+  /* padding:0 1.75rem 1.75rem;
+  background-color:var(--mist);
+  border-radius:24px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px; */
+
+
+  
+    /* padding: 0 1.75rem 1.75rem; */
+    padding: 0;
+    background-color: var(--mist);
+    border-radius: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px;
+}
+
+
+
+
+#articleHeroSection .blog-item{display:flex;gap:28px;padding:28px;border-radius:16px;background:transparent;align-items:flex-start;
+  
+  /* border-bottom:1px solid rgba(0,0,0,.02) */
+
+  border-bottom:1px solid rgba(0,0,0,.07);
+  border-radius: 0;
+
+}
+
+
+
+#articleHeroSection .blog-item:nth-child(odd){
+  /* border-right:1px solid rgba(0,0,0,.02) */
+  border-right:1px solid rgba(0,0,0,.07);
+  border-radius: 0;
+}
+
+
+
+
+#articleHeroSection .bi-image{flex:0 0 150px;height:150px;border-radius:12px;background-position:center;background-size:cover;background-repeat:no-repeat}
+#articleHeroSection .bi-content{display:flex;flex-direction:column;justify-content:space-between;gap:12px; height: 100%;}
+#articleHeroSection .bi-meta{display:flex;justify-content:space-between;align-items:center;gap:12px}
+#articleHeroSection .bi-date{font-size:.95rem;color:rgba(0,0,0,.8)}
+#articleHeroSection .bi-category{font-size:.75rem;padding:6px 12px;border-radius:24px;background-color:rgba(0,0,0,.06);font-weight:500}
+#articleHeroSection .bi-title{font-size:1.125rem;font-weight:600;line-height:1.4;font-family:'SF Pro',sans-serif;margin:0}
+
+/* responsive: keep two columns on large tablets, one column on small screens */
+@media(max-width:991px){
+  #articleHeroSection{padding:5.5rem 1rem}
+  #articleHeroSection .title-section .title {
+    margin-bottom: 20px;
+}
+  #articleHeroSection .title-section .button
+ {
+    align-items: flex-start !important;
+}
+  #articleHeroSection .blog-loop{grid-template-columns:1fr; padding: 0;}
+  #articleHeroSection .blog-item{flex-direction:row;align-items:flex-start;border-right:none}
+  #articleHeroSection .bi-image{flex:0 0 140px;height:140px}
+}
+
+@media(max-width:575px){
+  #articleHeroSection .blog-item{flex-direction:column;align-items:stretch;padding:20px}
+  #articleHeroSection .bi-image{width:100%;height:220px;flex:0 0 auto;border-radius:12px}
+  #articleHeroSection .bi-meta{flex-direction:row;justify-content:space-between}
+  #articleHeroSection .bi-title{font-size:1rem}
+}
+/*ARTICLE SECTION ENDS*/
+
+
+@media(max-width: 767px){
+
+  #articleHeroSection .blog-item:nth-child(odd) {
+    border-right: 0;
+    border-radius: 0;
+}
+
+  #articleHeroSection .blog-item {
+        padding: 30px;
+  }
+  #articleHeroSection .article-display-area {
+    margin-top: 3rem;
+}
+
+#articleHeroSection .article-header {
+    padding: 1.5rem 0.5rem 0 0.3rem;
+    flex-direction: column;
+    align-items: start !important;
+}
+
+#articleHeroSection .articleSearchBox {
+    width: 100%;
+    margin-top: 20px;
+}
+}
+
+@media(min-width: 768px) and (max-width: 1024px){
+  #articleHeroSection .allArticles {
+        width: 20.666667%;
+        padding-left: 0;
+    }
+
+
+  #articleHeroSection .article-display-area {
+        flex: 0 0 auto;
+        width: 79.333333%;
+  } 
+
+  #articleHeroSection .articleList p {
+    padding: 0.3rem 0 0 .5rem;
+}
+
+#articleBannerSection .text-content p {
+    width: 22.063rem;
+}
+
+#articleHeroSection .articleSearchBox {
+    width: 45%;
+}
+
+#articleHeroSection .bi-image {
+    width: 100%;
+}
+
+#articleHeroSection .blog-item {
+    flex-direction: column;
+}
+
+#articleBannerSection .hero-img {
+    top: 0;
+}
+
+#articleHeroSection .bi-content {
+    width: 100%;
+}
+
+#articleHeroSection .article-header {
+    padding: 1.75rem 0.5rem 0;
+}
+}
+
+/*************ARTICLE SECTION ENDS******************/
 
 
 
