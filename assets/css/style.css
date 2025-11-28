@@ -28,6 +28,7 @@
 
 /* Keep same at ≥1400px for consistency */
 @media (min-width: 1400px) {
+  body.index .container { max-width: 1450px;}
   .container {
     max-width: 1336px;
     padding-left: 0;
@@ -85,12 +86,13 @@
 #headerSection .navbar-nav{gap:clamp(16px,2.5vw,32px)}
 #headerSection .top-call{color:var(--glo);font-size:clamp(14px, 1vw, 16px);font-weight:500;font-family:'SF Pro',sans-serif;padding:10px 24px;text-decoration:none;line-height:24px;letter-spacing:.32px;background-color:rgba(255,255,255,.12);border-radius:25px;transition:background-color .3s ease,color .3s ease}
 #headerSection .top-call:hover{background-color:rgba(255,255,255,.25)}
-.navbar-toggler-icon {
-    background-image: url(../imgs/menu.svg);
-}
+.navbar-toggler-icon {background-image: url(../imgs/menu.svg);}
+
+body.index #headerSection>.header-container{width:100%;max-width:clamp(1140px,98vw,1362px);margin:0 auto;padding:0 1rem}
 
 /* MEDIA QUERIES */
 @media (min-width: 1920px) {
+  body.index #headerSection > .header-container {max-width: 1810px;}
   #headerSection > .header-container {max-width: 1440px;}
 }
 
@@ -99,35 +101,17 @@
   #headerSection .navbar-collapse{background-color:rgba(76,81,77,.85);border-radius:20px;margin-top:12px;padding:1rem}
   #headerSection .navbar-nav{gap:1rem;align-items:center}
   #headerSection .top-call{order:3}
-  #headerSection .navbar-toggler {
-    order: 1;
-            padding: 0;
-        border: 0;
-  }
-  #headerSection .navbar-brand {
-    order: 2;
-  }
-   #headerSection .navbar-collapse{ 
-    order:4;
-   }
-
+  #headerSection .navbar-toggler { order: 1; padding: 0; border: 0;}
+  #headerSection .navbar-brand {order: 2;}
+  #headerSection .navbar-collapse{ order:4;}
 }
 
 @media (max-width: 575px) {
-  #headerSection {
-    margin-bottom: 0;
-    padding: 0;
-    position: absolute;
-    width: 100%;
-  }
+  #headerSection {margin-bottom: 0;padding: 0;position: absolute;width: 100%;}
   #headerSection>.header-container{padding:0px}
   #headerSection>.header-container>nav{border-radius:0px}
   #headerSection .navbar-brand img{max-height:36px}
   #headerSection .navbar-collapse{padding:.75rem 1rem}
-
-
-
-
 }
 
 
@@ -1085,6 +1069,9 @@
 #footerSection .footer-links .widget-title{font-size:.875rem;color:var(--glo)!important;font-weight:400;opacity:70%}
 #footerSection .footer-links a{font-size:1rem;color:var(--glo)!important;font-weight:500;text-decoration:none}
 #footerSection .footer-button a{padding:10px 24px;font-size:1rem;border-radius:32px;font-weight:500;background-color:var(--glo);font-family:'SF Pro',sans-serif}
+
+#footerSection .copyright {padding-top: 6.25rem;}
+
 #footerSection .copyright .privacy a,.copyright p{font-size:.875rem;color:var(--glo)!important;text-decoration:none;opacity:70%;margin:0}
 #footerSection .copyright p{text-align:right}
 

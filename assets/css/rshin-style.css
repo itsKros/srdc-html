@@ -1,260 +1,4 @@
-:root {
-    --indigo: #96A5C2;
-    --vivid: #BFDCFE;
-    --blae: #BBBBBB;
-    --silt: #A8ACA3;
-    --taupe: #968C85;
-    --sand: #D8D0C5;
-    --ebony: #000000;
-    --glo: #FFFFFF;
-    --mist: #F2F0ED;
-}
 
-/* =========================
-   GEORGIA FONT
-========================= */
-@font-face {
-  font-family: 'Georgia Custom';
-  src: url('../fonts/georgia/georgia.woff2') format('woff2'),
-       url('../fonts/georgia/georgia.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* =========================
-   SF PRO DISPLAY - REGULAR
-========================= */
-@font-face {
-  font-family: 'SF Pro';
-  src: url('../fonts/sf-pro/SFProDisplay-Regular.woff2') format('woff2'),
-       url('../fonts/sf-pro/SF-Pro.ttf') format('truetype'),
-       url('../fonts/sf-pro/SFProDisplay-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* =========================
-   SF PRO DISPLAY - MEDIUM
-========================= */
-@font-face {
-  font-family: 'SF Pro';
-  src: url('../fonts/sf-pro/SFProDisplay-Medium.woff2') format('woff2'),
-       url('../fonts/sf-pro/SFProDisplay-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* =========================
-   SF PRO DISPLAY - SEMIBOLD
-========================= */
-@font-face {
-  font-family: 'SF Pro';
-  src: url('../fonts/sf-pro/SFProDisplay-Semibold.woff2') format('woff2'),
-       url('../fonts/sf-pro/SFProDisplay-Semibold.woff') format('woff');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* =========================
-   GLOBAL FONT USAGE
-========================= */
-body {
-  font-family: 'SF Pro', 
-               -apple-system, BlinkMacSystemFont, 
-               'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
-               'Helvetica Neue', sans-serif;
-  font-weight: 400;
-  line-height: 1.6;
-  color: #222;
-  background-color: var(--glo);
-}
-
-
-h1, h2, h3, blockquote {
-  font-family: 'Georgia Custom', Georgia, 'Times New Roman', serif;
-}
-
-
-/* ==============================================
-   MAIN CONTAINER (Matches 1336px grid from Figma)
-   ============================================== */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1336px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-/* Keep same at ≥1400px for consistency */
-@media (min-width: 1400px) {
-  .container {
-    max-width: 1336px;
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-/* ==============================================
-   HEADER CONTAINER (Wider 1392px grid)
-   ============================================== */
-.header-container {
-  max-width: 1392px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0;
-  padding-right: 0;
-  position: relative;
-  z-index: 2;
-}
-
-/* ==============================================
-   CONSISTENT INNER GUTTERS FOR BOTH
-   ============================================== */
-.container > .row,
-.header-container > .row {
-  --bs-gutter-x: 26px; /* ~52px total spacing in 1440px view */
-}
-
-/* ==============================================
-   CENTER FIX FOR ULTRA-WIDE SCREENS ≥1920px
-   Keeps design centered within 1440px frame
-   ============================================== */
-@media (min-width: 1920px) {
-    .container, .header-container {
-      padding-left: 2rem;
-      padding-right: 2rem;
-      max-width: 1872.768px;
-    }
-}
-
-
-@media (max-width: 768px) {
-  br.mhb {
-    display: none;
-  }
-}
-
-
-
-#headerSection{margin-bottom:-124px;padding:clamp(16px,2vw,24px) 0}
-#headerSection>.header-container{width:100%;max-width:clamp(1140px,92vw,1392px);margin:0 auto;padding:0 1rem}
-#headerSection>.header-container>nav{background-color:rgba(76,81,77,.6)!important;border-radius:100px;padding:clamp(12px,1.5vw,16px);backdrop-filter:blur(44px);-webkit-backdrop-filter:blur(44px);display:flex;align-items:center;justify-content:space-between}
-#headerSection .navbar-brand img{max-height:clamp(36px,4vw,48px);width:auto}
-#headerSection .nav-link{font-size:clamp(13px, .9vw, 14px);font-family:'SF Pro',sans-serif;color:var(--glo)!important;padding:0!important;transition:color .3s ease}
-#headerSection .nav-link.active,#headerSection .nav-link:hover{color:#fff!important}
-#headerSection .navbar-nav{gap:clamp(16px,2.5vw,32px)}
-#headerSection .top-call{color:var(--glo);font-size:clamp(14px, 1vw, 16px);font-weight:500;font-family:'SF Pro',sans-serif;padding:10px 24px;text-decoration:none;line-height:24px;letter-spacing:.32px;background-color:rgba(255,255,255,.12);border-radius:25px;transition:background-color .3s ease,color .3s ease}
-#headerSection .top-call:hover{background-color:rgba(255,255,255,.25)}
-.navbar-toggler-icon {
-    background-image: url(../imgs/menu.svg);
-}
-
-/* MEDIA QUERIES */
-@media (min-width: 1920px) {
-  #headerSection > .header-container {max-width: 1440px;}
-}
-
-@media (max-width: 991px) {
-  #headerSection > .header-container>nav{border-radius:40px;padding:12px 20px}
-  #headerSection .navbar-collapse{background-color:rgba(76,81,77,.85);border-radius:20px;margin-top:12px;padding:1rem}
-  #headerSection .navbar-nav{gap:1rem;align-items:center}
-  #headerSection .top-call{order:3}
-  #headerSection .navbar-toggler {
-    order: 1;
-            padding: 0;
-        border: 0;
-  }
-  #headerSection .navbar-brand {
-    order: 2;
-  }
-   #headerSection .navbar-collapse{ 
-    order:4;
-   }
-
-}
-
-@media (max-width: 575px) {
-  #headerSection {
-    margin-bottom: 0;
-    padding: 0;
-    position: absolute;
-    width: 100%;
-  }
-  #headerSection>.header-container{padding:0px}
-  #headerSection>.header-container>nav{border-radius:0px}
-  #headerSection .navbar-brand img{max-height:36px}
-  #headerSection .navbar-collapse{padding:.75rem 1rem}
-
-
-
-
-}
-/*HEADER SECTION CSS AND MEDIA QUERIES - ENDS*/
-
-
-
-
-
-/*DETAILS SECTION HEADER CSS AND MEDIA - STARTS*/
-
-#DetailsheaderSection{margin-bottom:-124px;padding:clamp(16px,2vw,24px) 0}
-#DetailsheaderSection>.header-container{width:100%;max-width:clamp(1140px,92vw,1392px);margin:0 auto;padding:0}
-#DetailsheaderSection>.header-container>nav{background-color:rgba(0,0,0,.24)!important;border-radius:100px;padding:clamp(12px,1.5vw,16px);backdrop-filter:blur(44px);-webkit-backdrop-filter:blur(44px);display:flex;align-items:center;justify-content:space-between}
-#DetailsheaderSection .navbar-brand img{max-height:clamp(36px,4vw,48px);width:auto}
-#DetailsheaderSection .nav-link{font-size:clamp(13px, .9vw, 14px);font-family:'SF Pro',sans-serif;color:var(--glo)!important;padding:0!important;transition:color .3s ease}
-#DetailsheaderSection .nav-link.active,#DetailsheaderSection .nav-link:hover{color:#fff!important}
-#DetailsheaderSection .navbar-nav{gap:clamp(16px,2.5vw,32px)}
-#DetailsheaderSection .top-call{color:var(--glo);font-size:clamp(14px, 1vw, 16px);font-weight:500;font-family:'SF Pro',sans-serif;padding:10px 24px;text-decoration:none;line-height:24px;letter-spacing:.32px;background-color:rgba(255,255,255,.12);border-radius:25px;transition:background-color .3s ease,color .3s ease}
-#DetailsheaderSection .top-call:hover{background-color:rgba(255,255,255,.25)}
-.navbar-toggler-icon {
-    background-image: url(../imgs/menu.svg);
-}
-
-/* MEDIA QUERIES */
-@media (min-width: 1920px) {
-  #DetailsheaderSection > .header-container {max-width: 1440px;}
-}
-
-@media (max-width: 991px) {
-  #DetailsheaderSection > .header-container>nav{border-radius:40px;padding:12px 20px}
-  #DetailsheaderSection .navbar-collapse{background-color:rgba(76,81,77,.85);border-radius:20px;margin-top:12px;padding:1rem}
-  #DetailsheaderSection .navbar-nav{gap:1rem;align-items:center}
-  #DetailsheaderSection .top-call{order:3}
-  #DetailsheaderSection .navbar-toggler {
-    order: 1;
-            padding: 0;
-        border: 0;
-  }
-  #DetailsheaderSection .navbar-brand {
-    order: 2;
-  }
-   #DetailsheaderSection .navbar-collapse{ 
-    order:4;
-   }
-
-}
-
-@media (max-width: 575px) {
-  #DetailsheaderSection {
-    margin-bottom: 0;
-    padding: 0;
-    position: absolute;
-    width: 100%;
-  }
-
-
-  #DetailsheaderSection>.header-container{padding:0px}
-  #DetailsheaderSection>.header-container>nav{border-radius:0px}
-  #DetailsheaderSection .navbar-brand img{max-height:36px}
-  #DetailsheaderSection .navbar-collapse{padding:.75rem 1rem}
-
-}
-/*DETAILS SECTION HEADER CSS AND MEDIA - STARTS*/
 
 
 
@@ -312,8 +56,16 @@ color: rgba(0, 0, 0,  0.7);
 
 /*ABOUT HERO SECTION MEDIA QUERIES AND CSS STARTS*/
 
-#AboutHeroSection{background-position: center; background-repeat: no-repeat; border-radius: 16px; height: 100%; min-height: 31.25rem; margin: 0.75rem;}
-#AboutHeroSection .container .row{ height: 100vh;}
+#AboutHeroSection .container .row{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 16px;
+    height: 100%;
+    min-height: 31.25rem;
+}
+
+
 
 
 /* MEDIA QUERIES */
@@ -358,7 +110,7 @@ color: rgba(0, 0, 0,  0.7);
 /*ABOUT DENTAL SERVICE CONTENT ABOVE SECTION START*/
 
 #AboutDentalserviceSection .title h2 {margin: 0; font-size: 3.5rem; line-height: 4.25rem; letter-spacing: -0.105rem;padding-bottom: 2rem;}
-#AboutDentalserviceSection .title p {margin: 0; font-family:'SF Pro'; padding-bottom: 2rem; font-size: 1rem;font-weight:400;line-height: 1.5rem;letter-spacing: -0.015rem; color: rgba(0, 0, 0,  0.6);}
+#AboutDentalserviceSection .title p {margin: 0; font-family:'SF Pro'; padding-bottom: 1.5rem; font-size: 1rem;font-weight:400;line-height: 1.5rem;letter-spacing: -0.015rem; color: rgba(0, 0, 0,  0.6);}
 
 #AboutDentalserviceSection{padding:clamp(4rem,6vw,5rem) 0 clamp(4rem,6vw,5rem)}
 #AboutDentalserviceSection .title-section{padding-bottom:clamp(2rem,4vw,3.75rem);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between}
@@ -875,7 +627,7 @@ width: 10%;
 
 
 #storySection .enjoy-service.d-flex {
-    padding: 5rem 0;
+    padding: 5rem 0 6.5rem;
 }
 
 .profile-content {
@@ -1043,8 +795,16 @@ width: 10%;
 
 
 #homeFaqSection .faq-section{background:#fff;color:#000}
-#homeFaqSection .faq-title{font-size:2rem;font-weight:600}
-#homeFaqSection .faq-subtitle{color:#555;margin-bottom:2rem}
+#homeFaqSection .faq-title{    
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 3.75rem;
+    letter-spacing: -0.06rem;}
+#homeFaqSection .faq-subtitle{color: #000;
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+    line-height: 2rem;
+    font-weight: 600;}
 #homeFaqSection .accordion-item{border:1px solid #eee;border-radius:.75rem;margin-bottom:1rem;overflow:hidden;background:#f9f8f7;box-shadow:0 2px 6px rgba(0,0,0,.04)}
 #homeFaqSection .accordion-flush>.accordion-item{border-radius:1rem}
 #homeFaqSection .accordion-button:focus{box-shadow:none}
@@ -1679,6 +1439,16 @@ width: 42.625rem;
 #DetailsExplanationSection  .second-explain, #DetailsExplanationSection  .third-explain {
    width: 100%; 
 }
+}
+
+@media(min-width: 768px) and (max-width: 1024px){
+ #DetailsAccordianExplanation .image-content-block.tablet-block{
+    display: none !important;
+}
+
+#DetailsAccordianExplanation .content-block {
+    width: 100% !important;
+}
 
 
 }
@@ -1714,6 +1484,8 @@ width: 42.625rem;
     padding-top: 3.75rem;
     /* gap: 5rem; */
     justify-content: space-between;
+    flex-direction: row;
+    
 }
 
 #DetailsAccordianExplanation .row.image-content-block img {
@@ -1998,6 +1770,10 @@ width: 42.625rem;
     line-height: 1.5rem;
     letter-spacing: -0.01rem;
     width: 100%;
+}
+
+#mobileDetailsExplanationSection .content-section.below .details-mobile-block{
+  display: none;
 }
 
 #mobileDetailsExplanationSection .content-section.below
@@ -2545,6 +2321,12 @@ z-index: 2;
 
 @media(max-width: 767px){
 
+
+  #careersFormSection .careersFormContent {
+    padding: 0px 1.25rem 3rem 1.25rem;
+
+}
+
   #CareersHeroSection{
     background-image: url('../imgs/Career/Career_Mobile_Banner.webp') !important;
     background-size: cover;
@@ -2610,6 +2392,8 @@ z-index: 2;
 }
 
 /*FORM CONTENT MEDIA*/
+
+
 #careersFormSection .careersFormContent h1 {
     width: 17.25rem !important;
     font-size: 2.25rem !important;
@@ -3060,7 +2844,7 @@ width: 42.625rem;
 }
 
 .contactFormTab .col-md-8 {
-        width: 81% !important;
+        width: 83% !important;
         order: 0;
         margin-top: -12.188rem;
         padding: 1rem 1rem 0 1rem;
@@ -3082,7 +2866,7 @@ width: 42.625rem;
 
 #contactHeroSection .title-section p {
 
-    width: 100%;
+    width: 94%;
 }
 
 
@@ -3104,7 +2888,7 @@ width: 42.625rem;
 #contactFormSection .contactFormContent h3 {
     font-size: 1.125rem !important;
     letter-spacing: -0.022rem !important;
-    padding-bottom: 2rem !important;
+    /* padding-bottom: 2rem !important; */
     line-height: 1.875rem !important;
 }
 
@@ -3488,7 +3272,7 @@ padding-top: 8.875rem;
 #articleBannerSection .title-section {
     position: relative;
     z-index: 2;
-    min-height: 43.813rem;
+    min-height: 39.813rem;
 }
 
 
@@ -3539,6 +3323,7 @@ padding-top: 8.875rem;
     font-weight: 400;
     line-height: 1.5rem;
     font-family: 'SF Pro';
+    color: rgba(0, 0, 0, 0.7);
 }
 
 #articleHeroSection .filter-toggle {
@@ -3547,12 +3332,13 @@ display: flex;
     align-items: center;
     text-decoration: none;
     color: rgba(0, 0, 0, 0.7);
-    font-weight: 400;
-    padding: 0.5rem 0;
+    font-weight: 500;
+    padding: 0.5rem 0 1rem 0;
     cursor: pointer;
     font-size: 1rem;
     position: relative;
     letter-spacing: -0.01rem;
+    line-height: 1.5rem;
 }
 
 .filter-toggle:hover {
@@ -3560,28 +3346,67 @@ display: flex;
 }
 
 .filter-toggle::after {
-    /* Creates the collapse icon (e.g., a chevron) */
-    content: "\2303"; /* Upwards chevron (or a Bootstrap icon if you use them) */
+
+    /* content: "\2303"; 
     font-size: 0.8rem;
     transition: transform 0.2s;
     margin-left: 0;
     margin-right: 0.5rem;
     color: #36454F;
-    order: -1;
+    order: -1; */
 
+
+    /* content: "";
+    width: 18px;
+    height: 7px;
+    background-image: url('../imgs/Article/articleChevron.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: transform 0.25s ease-in-out;
+    margin-right: 0;
+    margin-left: 0.5rem;
+    order: -1;
+    display: inline-block;
+    transform: rotate(-90deg); */
+
+
+    content: "";
+    width: 11px;
+    height: 11px;
+    background-image: url(../imgs/Article/articleChevron.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: transform 0.25s 
+    ease-in-out;
+    margin-right: 0;
+    margin-left: 0.5rem;
+    order: -1;
+    display: inline-block;
+    transform: rotate(-90deg);
+    padding-bottom: 19px
 }
 
 /* Rotate the icon when the toggle is active/expanded */
 .filter-toggle[aria-expanded="true"]::after {
-    transform: rotate(180deg);
+    transform: rotate(0deg);
+    padding: 0px;
+    margin-right: 5px;
 }
 
 .articleList p {
     /* Style for sub-list items (Invisalign, Smile Makeover, etc.) */
     padding: 0.3rem 0 0 1.5rem; /* Indent the text */
     font-size: 0.95rem;
-    color: rgba(0,0,0, 0.7);
+    color: rgba(0,0,0, 0.5);
+    margin-bottom: 0.5rem;
 }
+
+.allArticles #orthoSublist {
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+
 
 .filter-toggle-active{
   color: #000;
@@ -3591,6 +3416,7 @@ display: flex;
     font-family: 'SF Pro';
     line-height: 1.25rem;
     letter-spacing: -0.009rem;
+    padding-left: 1.388rem;
 }
 
 /* Style for the active/bold category (e.g., Orthodontic) */
@@ -3605,6 +3431,12 @@ display: flex;
 /******************************MEDIA QUERY*******************************/
 
 /*PHONE RESPONSIVE*/
+
+@media(min-width: 767px) and (max-width: 1024px)
+{
+#articleBannerSection .title-section {min-height: 32.813rem;}
+#articleBannerSection .left {padding: 15.313rem 0 0 0;}
+}
 
 @media (max-width: 767px) {
 
@@ -3668,7 +3500,7 @@ display: flex;
 }
 
 #articleBannerSection .text-content p {
-    width: 100%;
+    width: 97%;
 }
 }
 /*BANNER SECTION END*/
@@ -3683,6 +3515,8 @@ display: flex;
 #articleHeroSection .title h2{font-size:3rem;margin:0}
 
 
+
+
 #articleHeroSection .article-display-area {
     background-color: var(--mist);
     border-radius: 24px;
@@ -3690,6 +3524,7 @@ display: flex;
     row-gap: 20px;
     flex-direction: column;
     border: 1px solid rgba(0, 0, 0, .04);
+    width: 80.333333%;
 }
 
 
@@ -3815,6 +3650,7 @@ display: flex;
   }
   #articleHeroSection .article-display-area {
     margin-top: 3rem;
+    width: 100%;
 }
 
 #articleHeroSection .article-header {
@@ -3833,12 +3669,13 @@ display: flex;
   #articleHeroSection .allArticles {
         width: 20.666667%;
         padding-left: 0;
+        margin-left: -0.375rem;
     }
 
 
   #articleHeroSection .article-display-area {
         flex: 0 0 auto;
-        width: 79.333333%;
+        width: 71.333333%;
   } 
 
   #articleHeroSection .articleList p {
@@ -3878,46 +3715,60 @@ display: flex;
 
 
 
-/*Footer Section Start*/
-#footerSection {background-color:#4c514d;color:#fff;padding:3.75rem 0 2.5rem}
-#footerSection .navbar-brand img{width:283px}
-#footerSection .footer-contact .text-secondary.small{font-size:.875rem;color:var(--glo)!important;opacity:70%;font-weight:400}
-#footerSection .footer-contact .fw-bold{font-size:.875rem;color:var(--glo)!important;font-weight:500}
-#footerSection .footer-links .widget-title{font-size:.875rem;color:var(--glo)!important;font-weight:400;opacity:70%}
-#footerSection .footer-links a{font-size:1rem;color:var(--glo)!important;font-weight:500;text-decoration:none}
-#footerSection .footer-button a{padding:10px 24px;font-size:1rem;border-radius:32px;font-weight:500;background-color:var(--glo);font-family:'SF Pro',sans-serif}
-#footerSection .copyright .privacy a,.copyright p{font-size:.875rem;color:var(--glo)!important;text-decoration:none;opacity:70%;margin:0}
-#footerSection .copyright p{text-align:right}
 
+/*DETAILS SECTION HEADER CSS AND MEDIA - STARTS*/
 
-@media (max-width: 576px) {
-
-  #footerSection {
-    padding: 3.75rem 1rem 2.5rem;
-}
-#footerSection .col-md-2 {
-    width: 50%;
-    margin-top: 3rem;
+#DetailsheaderSection{margin-bottom:-124px;padding:clamp(16px,2vw,24px) 0}
+#DetailsheaderSection>.header-container{width:100%;max-width:clamp(1140px,92vw,1392px);margin:0 auto;padding:0}
+#DetailsheaderSection>.header-container>nav{background-color:rgba(0,0,0,.24)!important;border-radius:100px;padding:clamp(12px,1.5vw,16px);backdrop-filter:blur(44px);-webkit-backdrop-filter:blur(44px);display:flex;align-items:center;justify-content:space-between}
+#DetailsheaderSection .navbar-brand img{max-height:clamp(36px,4vw,48px);width:auto}
+#DetailsheaderSection .nav-link{font-size:clamp(13px, .9vw, 14px);font-family:'SF Pro',sans-serif;color:var(--glo)!important;padding:0!important;transition:color .3s ease}
+#DetailsheaderSection .nav-link.active,#DetailsheaderSection .nav-link:hover{color:#fff!important}
+#DetailsheaderSection .navbar-nav{gap:clamp(16px,2.5vw,32px)}
+#DetailsheaderSection .top-call{color:var(--glo);font-size:clamp(14px, 1vw, 16px);font-weight:500;font-family:'SF Pro',sans-serif;padding:10px 24px;text-decoration:none;line-height:24px;letter-spacing:.32px;background-color:rgba(255,255,255,.12);border-radius:25px;transition:background-color .3s ease,color .3s ease}
+#DetailsheaderSection .top-call:hover{background-color:rgba(255,255,255,.25)}
+.navbar-toggler-icon {
+    background-image: url(../imgs/menu.svg);
 }
 
-#footerSection .col-md-3 {
-  margin-top: 3rem;
-    justify-content: start !important;
+/* MEDIA QUERIES */
+@media (min-width: 1920px) {
+  #DetailsheaderSection > .header-container {max-width: 1440px;}
 }
 
-#footerSection .copyright .col-md-6 {
-  text-align: center !important;
-    justify-content: center !important;
+@media (max-width: 991px) {
+  #DetailsheaderSection > .header-container>nav{border-radius:40px;padding:12px 20px}
+  #DetailsheaderSection .navbar-collapse{background-color:rgba(76,81,77,.85);border-radius:20px;margin-top:12px;padding:1rem}
+  #DetailsheaderSection .navbar-nav{gap:1rem;align-items:center}
+  #DetailsheaderSection .top-call{order:3}
+  #DetailsheaderSection .navbar-toggler {
+    order: 1;
+            padding: 0;
+        border: 0;
+  }
+  #DetailsheaderSection .navbar-brand {
+    order: 2;
+  }
+   #DetailsheaderSection .navbar-collapse{ 
+    order:4;
+   }
+
 }
 
-#footerSection .copyright p {
-    text-align: center;
+@media (max-width: 575px) {
+  #DetailsheaderSection {
+    margin-bottom: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+  }
+
+
+  #DetailsheaderSection>.header-container{padding:0px}
+  #DetailsheaderSection>.header-container>nav{border-radius:0px}
+  #DetailsheaderSection .navbar-brand img{max-height:36px}
+  #DetailsheaderSection .navbar-collapse{padding:.75rem 1rem}
+
 }
-
-
-}
-
-/*Footer Section Start End*/
-
-
+/*DETAILS SECTION HEADER CSS AND MEDIA - STARTS*/
 
